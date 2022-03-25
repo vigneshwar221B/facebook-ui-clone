@@ -1,90 +1,115 @@
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-  <div class="container-fluid justify-content-between">
-    <!-- Left elements -->
-    <div class="d-flex my-2 my-sm-0">
-      <!-- Brand -->
-      <a
-        class="navbar-brand me-2 mb-1 d-flex align-items-center"
-        routerLink="/login"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
-          height="20"
-          alt=""
-          loading="lazy"
-          style="margin-top: 2px"
-        />
-      </a>
+<header >
+  <div>
+      <ul>
+          <!-- Left Elements start  -->
+          <li> <a href="#" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li>
+            <div [ngClass]="{'select':selectForm}" >
+              <form class="search-content" >
+                <!-- <a href="#test" (click)="selectClass(0)">-->
+                   <i class="fa-solid fa-arrow-left arrow"></i>
+                <!--</a> -->
+                <div class="search" (click)="selectClass()">
+                  <button class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <input  class="search-txt" type="text" name="" placeholder="Search Facebook">
+                </div>
+                <div class="text">
+                  <p>No recent searches</p>
+                </div>
+              </form>
+           </div>
+        </li>
+        <!-- Left Elements start -->
 
-      <!-- Search form -->
-      <form class="input-group w-auto my-auto d-none d-sm-flex">
-        <input
-          autocomplete="off"
-          type="search"
-          class="form-control rounded"
-          placeholder="Search Facebook"
-          style="min-width: 125px; border: 1px; border-radius: 50%"
-        />
-      </form>
-    </div>
-    <!-- Left elements -->
-
-    <!-- Center elements -->
-    <ul class="navbar-nav flex-row d-none d-md-flex">
-      <li class="nav-item me-3 me-lg-1 active">
-        <a class="nav-link" routerLink="/">
-          <span><fa-icon icon="home"></fa-icon></span>
-        </a>
-      </li>
-
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link" routerLink="/watch">
-          <span><fa-icon icon="tv"></fa-icon></span>
-        </a>
-      </li>
-
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link" routerLink="/marketplace">
-          <span><fa-icon icon="shop"></fa-icon></span>
-        </a>
-      </li>
-
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link" routerLink="/groups">
-          <span><fa-icon icon="user-group"></fa-icon></span>
-        </a>
-      </li>
-
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link" routerLink="/gaming">
-          <span><fa-icon icon="play"></fa-icon></span>
-        </a>
-      </li>
-    </ul>
-    <!-- Center elements -->
-
-    <!-- Right elements -->
-    <ul class="navbar-nav flex-row">
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link d-sm-flex align-items-sm-center" routerLink="/profile">
-          <img
-            src="https://www.baytekent.com/wp-content/uploads/2016/12/facebook-default-no-profile-pic1.jpg"
-            class="rounded-circle"
-            height="22"
-            alt=""
-            loading="lazy"
-          />
-          <strong class="d-none d-sm-block ms-1">Name</strong>
-        </a>
-      </li>
-      <li class="nav-item me-3 me-lg-1">
-        <a class="nav-link" href="#">
-          <span><fa-icon icon="ellipsis-vertical"></fa-icon></span>
-        </a>
-      </li>
-    </ul>
-    <!-- Right elements -->
+          <li id="space2"></li>
+          <!-- Center Elements start -->
+          <li> <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : ''" data-tooltip="Home" routerLink="/" id="home" > <mat-icon>home</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(2)" [ngClass]="activeTab===2 ? 'active' : ''" data-tooltip="Friends" href="#" id="friend"><mat-icon>group</mat-icon> </a></li>
+          <li> <a class="tip center" (click)="active(3)" [ngClass]="activeTab===3 ? 'active' : ''" data-tooltip="Watch" routerLink="/watch" id="tv"> <mat-icon>ondemand_video</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(4)" [ngClass]="activeTab===4 ? 'active' : ''" data-tooltip="Marketplace" routerLink="/marketplace" id="marketplace">  <mat-icon>store</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(5)" [ngClass]="activeTab===5 ? 'active' : ''" data-tooltip="Gaming" routerLink="/gaming" id="gaming"> <mat-icon>view_quilt</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(6)" [ngClass]="activeTab===5 ? 'active' : ''" data-tooltip="More" href="#" id="more"> <mat-icon>menu</mat-icon> </a> </li>
+          <!-- Center Elements ends -->
+          <li id="space1"></li>
+          <!-- Right Elements start -->
+          <li>
+            <div class="profile" (click)="activeProfile()" [ngClass]="{'profileActive':profileStatus}" >
+              <img src="https://c4.wallpaperflare.com/wallpaper/532/857/84/5k-good-morning-mountain-hill-wallpaper-preview.jpg" alt="profile-picture" >
+              <div class="name">Facebook</div>
+            </div>
+          </li>
+          <li> <button class="tip" (click)="rightNavActive(1)" [ngClass]="rightActiveTab===1 ? 'rightNavFocus' : ''" data-tooltip="Create" id="btn_add"><mat-icon>add</mat-icon></button> </li>
+          <li> <button class="tip" (click)="rightNavActive(2)" [ngClass]="rightActiveTab===2 ? 'rightNavFocus' : ''" data-tooltip="Menu" id="btn_plus"><mat-icon>apps</mat-icon></button> </li>
+          <li> <button class="tip" (click)="rightNavActive(3)" [ngClass]="rightActiveTab===3 ? 'rightNavFocus' : ''" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger"></i></button></li>
+          <li> <button class="tip" (click)="rightNavActive(4)" [ngClass]="rightActiveTab===4 ? 'rightNavFocus' : ''" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell"></i></button></li>
+          <li> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button>  </li>
+          <!-- Right Elements ends -->
+      </ul>
   </div>
-</nav>
-<!-- Navbar -->
+</header>
+<div *ngIf="accountStatus" class="sideContainer" id="account">
+  <div class="top-section">
+    <div class="img">
+      <img src="https://c4.wallpaperflare.com/wallpaper/532/857/84/5k-good-morning-mountain-hill-wallpaper-preview.jpg" alt="profile-picture">
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Facebook UI-Clone</div>
+      <a class="profile-link">See your profile</a>
+    </div>
+  </div>
+  <div class="second-session">
+    <div class="icon">
+      <mat-icon>feedback</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Give feedback</div>
+      <div class="profile-link">Help us improve Facebook.</div>
+    </div>
+  </div>
+  <div class="third-session" id="third-session-1">
+    <div class="icon">
+      <mat-icon>settings</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Settings & Privacy</div>
+    </div>
+    <div class="arrow">
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+  </div>
+  <div class="third-session" id="third-session-2">
+    <div class="icon">
+      <mat-icon>help</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Help & support</div>
+    </div>
+    <div class="arrow">
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+    </div>
+  <div class="third-session" id="third-session-3">
+    <div class="icon">
+      <mat-icon>nightlight</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Display & accessibility</div>
+    </div>
+    <div class="arrow" >
+      <mat-icon>navigate_next</mat-icon>
+    </div>
+    </div>
+  <div class="third-session" id="third-session-4">
+    <div class="icon">
+      <mat-icon>logout</mat-icon>
+    </div>
+    <div class="sidecon-first-text">
+      <div class="name">Logout</div>
+    </div>
+  </div>
+  <div class="bottom-session">
+    <p class="profile-link">Privacy  · Terms  · Advertising  · Ad choices   · Cookies  ·  More · Meta © 2022</p>
+  </div>
+</div >

@@ -11,6 +11,7 @@ import { GroupsComponent } from './groups/groups.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
+import {MatIconModule} from '@angular/material/icon'
 import {
   FontAwesomeModule,
   FaIconLibrary,
@@ -31,7 +32,12 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     ProfileComponent,
     AuthPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    MatIconModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
