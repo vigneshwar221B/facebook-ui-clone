@@ -20,6 +20,9 @@ import {
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { CreatePostComponent } from './home/create-post/create-post.component';
+import { SideNavComponent } from './home/components/side-nav/side-nav.component';
+import { SideNavItemsComponent } from './home/components/side-nav-items/side-nav-items.component';
+import { SideNavShortcutsComponent } from './home/components/side-nav-shortcuts/side-nav-shortcuts.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { CreatePostComponent } from './home/create-post/create-post.component';
     ProfileComponent,
     AuthPageComponent,
     CreatePostComponent,
+    SideNavComponent,
+    SideNavItemsComponent,
+    SideNavShortcutsComponent,
   ],
   imports: [
     BrowserModule,
