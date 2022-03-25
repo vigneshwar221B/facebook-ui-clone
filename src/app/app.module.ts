@@ -29,6 +29,12 @@ import { SideNavShortcutsComponent } from './home/components/side-nav-shortcuts/
 import { StoryComponent } from './home/components/story/story.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PostCardComponent } from './home/components/post-card/post-card.component';
+import { RightNavComponent } from './home/components/right-nav/right-nav.component';
+import { RightNavTitleComponent } from './home/components/right-nav-title/right-nav-title.component';
+import { ContactsListComponent } from './home/components/contacts-list/contacts-list.component';
+import { ContactItemComponent } from './home/components/contact-item/contact-item.component';
+import { SponsersListComponent } from './home/components/sponsers-list/sponsers-list.component';
+import { SponserItemComponent } from './home/components/sponser-item/sponser-item.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +53,12 @@ import { PostCardComponent } from './home/components/post-card/post-card.compone
     SideNavShortcutsComponent,
     StoryComponent,
     PostCardComponent,
+    RightNavComponent,
+    RightNavTitleComponent,
+    ContactsListComponent,
+    ContactItemComponent,
+    SponsersListComponent,
+    SponserItemComponent,
 
   ],
   imports: [

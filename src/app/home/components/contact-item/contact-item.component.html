@@ -1,0 +1,18 @@
+<div class="contact-item" *ngIf="friend.name">
+    <div class="contact-img">
+        <img src="{{friend.profileImg}}">
+        <div class="active-circle"></div>
+    </div>
+    <div class="contact-name">
+        <h4>{{friend.name}}</h4>
+    </div>
+</div>
+
+<div class="contact-item" *ngIf="!friend.name">
+    <div class="contact-img">
+        <mat-icon>add</mat-icon>
+    </div>
+    <div class="contact-name">
+        <h4>Create New Group</h4>
+    </div>
+</div>
