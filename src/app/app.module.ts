@@ -16,7 +16,10 @@ import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { CreatePostComponent } from './home/create-post/create-post.component';
@@ -25,6 +28,7 @@ import { SideNavItemsComponent } from './home/components/side-nav-items/side-nav
 import { SideNavShortcutsComponent } from './home/components/side-nav-shortcuts/side-nav-shortcuts.component';
 import { StoryComponent } from './home/components/story/story.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostCardComponent } from './home/components/post-card/post-card.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +46,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SideNavItemsComponent,
     SideNavShortcutsComponent,
     StoryComponent,
+    PostCardComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     MatIconModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent],
