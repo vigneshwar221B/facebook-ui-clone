@@ -6,12 +6,17 @@
   display: flex;
   justify-content: center;
 }
-.home{
+.home {
   display: flex;
   margin-top: 3.5rem;
 }
-.feed
-{
+.feed {
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+  .feed {
+    margin-left: 22%;
+  }
 }

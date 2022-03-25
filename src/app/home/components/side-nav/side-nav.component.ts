@@ -39,9 +39,9 @@ export class SideNavComponent implements OnInit {
 
   navItems = [
     {
-      item: 'Pranesh Vimal',
+      item: 'Mark Zuckerberg',
       img_url:
-        'https://scontent.fmaa2-2.fna.fbcdn.net/v/t1.6435-1/203190343_3072727956340665_5106134406365931647_n.jpg?stp=dst-jpg_p480x480&_nc_cat=108&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=vmxET0H7QfcAX_qPUyc&_nc_ht=scontent.fmaa2-2.fna&oh=00_AT_-VAiQf6YddOHSf482K36gxuqWt6Jxua_kA4698jujEg&oe=6261427E',
+        'https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg',
     },
     {
       item: 'Friends',
