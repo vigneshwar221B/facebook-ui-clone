@@ -23,6 +23,8 @@ import { CreatePostComponent } from './home/create-post/create-post.component';
 import { SideNavComponent } from './home/components/side-nav/side-nav.component';
 import { SideNavItemsComponent } from './home/components/side-nav-items/side-nav-items.component';
 import { SideNavShortcutsComponent } from './home/components/side-nav-shortcuts/side-nav-shortcuts.component';
+import { StoryComponent } from './home/components/story/story.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,12 +41,14 @@ import { SideNavShortcutsComponent } from './home/components/side-nav-shortcuts/
     SideNavComponent,
     SideNavItemsComponent,
     SideNavShortcutsComponent,
+    StoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
