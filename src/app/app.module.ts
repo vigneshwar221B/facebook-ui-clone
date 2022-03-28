@@ -46,7 +46,6 @@ import { ProfileIconComponent } from './home/components/profile-icon/profile-ico
 import { CreateRoomComponent } from './home/components/create-room/create-room.component';
 import { ProfileCardComponent } from './home/components/profile-card/profile-card.component';
 import { CreateStoryComponent } from './create-story/create-story.component';
-<<<<<<< Updated upstream
 import { SideNavMarketplaceComponent } from './marketplace/side-navbar/side-nav-marketplace/side-nav-marketplace.component';
 import { SideNavMarketplaceitemsComponent } from './marketplace/side-navbar/side-nav-marketplaceitems/side-nav-marketplaceitems.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -55,9 +54,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
-=======
 import { WatchCardComponent } from './watch/watch-card/watch-card.component';
->>>>>>> Stashed changes
 
 
 @NgModule({
@@ -93,12 +90,9 @@ import { WatchCardComponent } from './watch/watch-card/watch-card.component';
     CreateRoomComponent,
     ProfileCardComponent,
     CreateStoryComponent,
-<<<<<<< Updated upstream
     SideNavMarketplaceComponent,
-    SideNavMarketplaceitemsComponent
-=======
+    SideNavMarketplaceitemsComponent,
     WatchCardComponent,
->>>>>>> Stashed changes
 
 
   ],
