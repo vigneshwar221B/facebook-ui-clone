@@ -806,6 +806,7 @@
 
             .likes {
               display: flex;
+              align-items: center;
 
               .icon-display {
                 margin-right: 0.5rem;
@@ -877,6 +878,8 @@
                 padding: 0.2rem;
                 margin-right: 0.3rem;
                 margin-top: 0.2rem;
+                display: flex;
+                align-items: center;
 
                 i {
                   filter: invert(39%) sepia(21%) saturate(200%) saturate(109.5%)

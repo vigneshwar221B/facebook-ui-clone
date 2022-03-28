@@ -74,7 +74,7 @@ export class PostSectionComponent implements OnInit {
               },
             ],
             reacted: {
-              name: 'like',
+              name: 'Like',
               type: 'like',
             },
             comments: [],
