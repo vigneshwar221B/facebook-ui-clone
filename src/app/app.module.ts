@@ -55,6 +55,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { SideContainerComponent } from './navbar/side-container/side-container.component';
+import { WatchCardComponent } from './watch/watch-card/watch-card.component';
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import { SideContainerComponent } from './navbar/side-container/side-container.c
     CreateStoryComponent,
     SideNavMarketplaceComponent,
     SideNavMarketplaceitemsComponent,
-    SideContainerComponent
+    SideContainerComponent,
+    WatchCardComponent,
 
 
   ],
@@ -107,7 +109,7 @@ import { SideContainerComponent } from './navbar/side-container/side-container.c
     MatCardModule,
     MatDividerModule,
     MatSidenavModule,
-    HttpClientModule,   
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
