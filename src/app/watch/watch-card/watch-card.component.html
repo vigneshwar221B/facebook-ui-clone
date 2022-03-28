@@ -1,0 +1,42 @@
+
+<div class="main">
+  <mat-card class="post" *ngFor="let data of watchdata">
+<mat-card-title-group>
+      <mat-card-title class="watch-username" >
+        <img mat-card-avatar class="watch-user-dp"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg">
+       <div class="space"><span></span></div>
+       <p> {{data.username}}
+        <mat-card-subtitle class="hours">
+         {{data.posted_date}} <mat-icon>visibilty</mat-icon>
+        </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe width="800" height="400" [src]= "data.video" frameborder="0" allow="  autoplay; encrypted-media; " ></iframe>
+
+    <mat-card-footer>
+      <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="font-size: medium; text-indent: -5px;" >thumb_up_outline</mat-icon>like</button>
+
+        <mat-menu #menu="matMenu" yPosition="below">
+          <button mat-menu-item class="like-button"> <img src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"><img src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"> <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif"><img src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"><img src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"><img src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"></button>
+        </mat-menu>
+
+        <button mat-button><mat-icon style="font-size: medium; text-indent: -5px;">chat_bubble</mat-icon>comment</button>
+        <button mat-button><mat-icon style="font-size: medium; text-indent: -5px; ;" >reply</mat-icon>share</button>
+      </div>
+
+        <div class="views">
+          <mat-icon style="color: blue;font-size: medium;">thumb_up</mat-icon> {{data.no_of_like}} - {{data.no_of_comments}} comments - {{data.no_of_views}} views
+        </div>
+        <p></p>
+
+    </mat-card-footer>
+
+  </mat-card>
+
+</div>
+
+
+

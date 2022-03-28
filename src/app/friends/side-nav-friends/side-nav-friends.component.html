@@ -1,6 +1,7 @@
 <div class="sidebar">
   <div class="head">
-    <div class="heading">Friends</div>
+    <div class="heading" *ngIf="data==='friends'">Friends</div>
+    <div class="heading" *ngIf="data ==='watch'">Watch</div>
     <div class="icon">
       <i></i>
     </div>
