@@ -5,11 +5,9 @@ import { GamingComponent } from './gaming/gaming.component';
 import { GroupsComponent } from './groups/groups.component';
 import { HomeComponent } from './home/home.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
-import { ProfileComponent } from './profile/profile.component';
 import { WatchComponent } from './watch/watch.component';
 import { FriendsComponent } from './friends/friends.component';
 import { CreateStoryComponent } from './create-story/create-story.component';
-
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -18,9 +16,13 @@ const routes: Routes = [
   { path: 'marketplace', component: MarketplaceComponent },
   { path: 'groups', component: GroupsComponent },
   { path: 'gaming', component: GamingComponent },
-  { path: 'profile', component: ProfileComponent },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./profile/profile.module').then((m) => m.ProfileModule),
+  },
   { path: 'friends', component: FriendsComponent },
-  { path: 'createstory', component: CreateStoryComponent}
+  { path: 'createstory', component: CreateStoryComponent },
 ];
 
 @NgModule({

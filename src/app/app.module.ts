@@ -9,18 +9,17 @@ import { WatchComponent } from './watch/watch.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { GroupsComponent } from './groups/groups.component';
 import { GamingComponent } from './gaming/gaming.component';
-import { ProfileComponent } from './profile/profile.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import {MatCardModule} from '@angular/material/card';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { CreatePostComponent } from './home/create-post/create-post.component';
@@ -56,7 +55,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { WatchCardComponent } from './watch/watch-card/watch-card.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,7 +64,6 @@ import { WatchCardComponent } from './watch/watch-card/watch-card.component';
     MarketplaceComponent,
     GroupsComponent,
     GamingComponent,
-    ProfileComponent,
     AuthPageComponent,
     CreatePostComponent,
     SideNavComponent,

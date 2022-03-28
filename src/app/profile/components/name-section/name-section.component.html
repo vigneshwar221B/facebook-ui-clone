@@ -1,0 +1,70 @@
+<div class="name-section">
+  <div class="profile">
+    <img
+      src="https://scontent.fixm4-1.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=4D9hZwxZFZIAX_20O80&_nc_ht=scontent.fixm4-1.fna&oh=00_AT-3pqM0XXzbq9mJim_5vt15Zf26K6fX1oBWW8mZjMLO3Q&oe=62648D56"
+      alt="Mark"
+    />
+    <div class="edit-profile">
+      <i
+        data-visualcompletion="css-img"
+        class="hu5pjgll lzf7d6o1"
+        style="
+          background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/-wm-fqdtvDt.png');
+          background-position: 0px -432px;
+          background-size: 26px 1400px;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          display: inline-block;
+        "
+      ></i>
+    </div>
+  </div>
+  <div class="name">
+    <div class="display-content">
+      <div class="text">
+        <h1>Mark Zuckerberg</h1>
+        <i
+          data-visualcompletion="css-img"
+          aria-label="Verified account"
+          role="img"
+          style="
+            background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yc/r/8C7IJNEsnom.png');
+            background-position: -84px -92px;
+            background-size: 190px 146px;
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            display: inline-block;
+          "
+        ></i>
+      </div>
+      <div class="friends-count">
+        <p>629 Friends</p>
+      </div>
+      <div class="friends-image">
+        <img
+          *ngFor="let friend of friendsList.slice(0, 8)"
+          src="{{ friend.img }}"
+          alt="{{ friend.name }}"
+        />
+      </div>
+    </div>
+    <div class="options">
+      <div class="story">
+        <img
+          src="https://static.xx.fbcdn.net/rsrc.php/v3/yA/r/gmRaVnWydOi.png"
+          alt=""
+        />
+        <p>Add to Story</p>
+      </div>
+      <div class="edit-profile">
+        <img
+          src="https://static.xx.fbcdn.net/rsrc.php/v3/yl/r/tmaz0VO75BB.png"
+          alt=""
+        />
+        <p>Edit profile</p>
+      </div>
+    </div>
+  </div>
+</div>
