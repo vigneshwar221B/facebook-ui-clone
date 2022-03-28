@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Status } from '../interface/status';
 
 @Component({
   selector: 'app-friend-card-item',
@@ -11,12 +12,24 @@ export class FriendCardItemComponent implements OnInit {
   @Input() button1:any;
   @Input() button2:any;
   @Output() ItemEvent= new EventEmitter<string>();
-  constructor() { }
+  @Output() acceptStatus = new EventEmitter<Status>();
+  update={} as Status;
+  friendsList:string='';
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.friendsList=this.friendrequest.friends_name.join("\n");
+   // console.log(this.friendsList);
   }
   removeElement(friendrequest:string){
     console.log(friendrequest);
-     this.ItemEvent.emit(friendrequest);
+    this.ItemEvent.emit(friendrequest);
+  }
+  addFriend(name:string,status:string){
+    this.update.name=name;
+    this.update.status= (status==='yes') ? 'Request sent': 'Request cancelled';
+    console.log("In child : "+this.update.name+" "+this.update.status);
+    this.acceptStatus.emit(this.update);
   }
 }

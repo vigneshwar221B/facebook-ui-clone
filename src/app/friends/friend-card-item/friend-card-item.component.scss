@@ -65,7 +65,12 @@
       font-size: 0.9rem;
     }
   }
-  .button{
+  .replace{
+    color:#65676b;
+    padding:1px 2px;
+    margin:5px 0px;
+  }
+  #button{
     display: flex;
     flex-direction: column;
     padding:0px 5px;
@@ -92,4 +97,30 @@
       background-color: #dbdcdf;
     }
   }
+}
+.tip {
+ // width:100%;
+  position: relative;
+}
+.tip::after {
+  content: attr(datatooltip);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+  position: absolute;
+  left:10%;
+  bottom: -150%;
+  padding: 1px 12px;
+  line-height: 30px;
+  border-radius: 10px;
+  @include flexProp(none,center , column,wrap );
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+  user-select: none;
+}
+.tip:hover::after {
+  opacity: 1;
 }
