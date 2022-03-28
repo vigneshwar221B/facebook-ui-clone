@@ -1,23 +1,36 @@
-<div class="friend-card-item" ><!--[ngClass]="friendrequest.item==='Home' ? 'nav-side-container-active' : ''"-->
-  <!-- name : 'Deepika Sanna',
-  work : 'Programmer at Meta',
-  education : 'Studied at Harvard University',
-  image_url :  -->
+<!--  "tip center" data-tooltip="Home"  -->
+<div class="friend-card-item" >
   <div class="card-image" >
    <img src="{{friendrequest.image_url}}" alt="profile-pic"/>
   </div>
+
   <div class="card-content">
     <div class="name">{{friendrequest.name}}</div>
-    <div class="mutual-friends">
-      <div class="images">
-        <img src="https://www.photopills.com/sites/default/files/tutorials/2020/sunrise-cover.jpg" alt="friend1" class="friend1"/>
-        <img src="https://www.photopills.com/sites/default/files/tutorials/2020/sunrise-cover.jpg" alt="friend2" class="friend2">
+    <div *ngIf="friendrequest.accept==='neutral'">
+      <div class="mutual-friends">
+        <div *ngIf="friendrequest.mutual_friends>0" class="images">
+          <img src="{{friendrequest.friends_url[0]}}" alt="friend1" class="friend1"/>
+          <img *ngIf="friendrequest.mutual_friends>1" src="https://thumbs.dreamstime.com/b/concept-open-magic-book-pages-water-land-small-child-fantasy-nature-learning-copy-space-166401875.jpg" alt="friend2" class="friend2">
+        </div>
+        <div class="count tip" [attr.datatooltip]="friendsList">{{friendrequest.mutual_friends}} mutual friends</div>
       </div>
-      <div class="count">{{friendrequest.mutual_friends}} mutual friends</div>
     </div>
-    <div class="button">
-      <button class="add">{{button1}}</button>
-      <button class="remove" (click)="removeElement(friendrequest.name)">{{button2}}</button>
+    <div *ngIf="friendrequest.accept!=='neutral'">
+      <div class="replace">
+        <div class="status">{{friendrequest.accept}}</div>
+      </div>
+    </div>
+    <div *ngIf="friendrequest.accept==='neutral' || friendrequest.accept==='Request cancelled'">
+      <div id="button">
+        <button class="add" (click)="addFriend(friendrequest.name,'yes')">{{button1}}</button>
+        <button class="remove" (click)="removeElement(friendrequest.name)">{{button2}}</button>
+      </div>
+    </div>
+    <div *ngIf="friendrequest.accept==='Request sent' || friendrequest.accept==='Request accepted'">
+      <div id="button">
+        <button class="add" style="background-color: white;color:white">{{button1}}</button>
+        <button class="remove" (click)="addFriend(friendrequest.name,'no')">Cancel</button>
+      </div>
     </div>
   </div>
 </div>

@@ -11,7 +11,8 @@ import { GroupsComponent } from './groups/groups.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import {
   FontAwesomeModule,
   FaIconLibrary,
@@ -44,6 +45,8 @@ import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
 import { ProfileIconComponent } from './home/components/profile-icon/profile-icon.component';
 import { CreateRoomComponent } from './home/components/create-room/create-room.component';
 import { ProfileCardComponent } from './home/components/profile-card/profile-card.component';
+import { CreateStoryComponent } from './create-story/create-story.component';
+
 
 @NgModule({
   declarations: [
@@ -77,6 +80,8 @@ import { ProfileCardComponent } from './home/components/profile-card/profile-car
     ProfileIconComponent,
     CreateRoomComponent,
     ProfileCardComponent,
+    CreateStoryComponent,
+
 
   ],
   imports: [
@@ -88,7 +93,8 @@ import { ProfileCardComponent } from './home/components/profile-card/profile-car
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],
