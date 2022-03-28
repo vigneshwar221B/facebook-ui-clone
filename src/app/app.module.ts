@@ -41,6 +41,9 @@ import { SideNavFriendItemsComponent } from './friends/side-nav-friend-items/sid
 import { FriendCardsComponent } from './friends/friend-cards/friend-cards.component';
 import { FriendCardItemComponent } from './friends/friend-card-item/friend-card-item.component';
 import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
+import { ProfileIconComponent } from './home/components/profile-icon/profile-icon.component';
+import { CreateRoomComponent } from './home/components/create-room/create-room.component';
+import { ProfileCardComponent } from './home/components/profile-card/profile-card.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
     FriendCardsComponent,
     FriendCardItemComponent,
     PopDetailComponent,
+    ProfileIconComponent,
+    CreateRoomComponent,
+    ProfileCardComponent,
 
   ],
   imports: [

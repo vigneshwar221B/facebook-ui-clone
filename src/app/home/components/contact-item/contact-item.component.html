@@ -1,8 +1,9 @@
 <div class="contact-item" *ngIf="friend.name">
-    <div class="contact-img">
+    <!-- <div class="contact-img">
         <img src="{{friend.profileImg}}">
         <div class="active-circle"></div>
-    </div>
+    </div> -->
+    <app-profile-icon [profileImg]="friend.profileImg"></app-profile-icon>
     <div class="contact-name">
         <h4>{{friend.name}}</h4>
     </div>
