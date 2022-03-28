@@ -446,7 +446,7 @@ div ul li #btn_profile::after {
 /*side bar container*/
 
 .sideContainer {
-  z-index: 10;
+  z-index: 11;
 
   width: 350px;
   @include flex(column, "", space-between, "");

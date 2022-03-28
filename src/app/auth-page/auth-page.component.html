@@ -1,4 +1,4 @@
-<body>
+<div class="body">
     <!-- Login -->
     <div class="container  d-flex flex-column flex-lg-row justify-content-evenly">
       <!-- heading -->
@@ -17,10 +17,10 @@
           <a href="#" class="text-decoration-none text-center"><p>Forgotten password?</p></a>
           <!-- create form -->
           <hr />
-         
+
           <div class="text-center my-3 px-5">
-            <!-- <button class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#createModal">Create New Account</button> -->
-            <a href="#createModal" data-toggle="modal"><button class="btn btn-success btn-lg" type="button" >Create New Account</button></a>
+            <!--href="#createModal" <button class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#createModal">Create New Account</button> -->
+            <a  (click)="openModel()" data-toggle="modal"><button class="btn btn-success btn-lg" type="button" >Create New Account</button></a>
         </div>
           <!-- create modal -->
           <div class="modal fade" id="createModal">
@@ -33,7 +33,7 @@
                     <span class="text-muted fs-7">It's quick and easy.</span>
                   </div>
                   <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close" aria-hidden="true"></button>
-                 
+
                 </div>
                 <!-- body -->
                 <div class="modal-body" >
@@ -54,7 +54,7 @@
                     <div class="row my-3">
                       <span class="text-muted fs-7">Date of birth <i class="fas fa-question-circle" data-bs-toggle="popover" type="button" data-bs-content="And here's some amazing content. It's very engaging. Right?"></i></span>
                       <div class="col">
-                        <select class="form-select">  
+                        <select class="form-select">
                           <option  *ngFor="let i of date">{{i}}</option>
                         </select>
                       </div>
@@ -73,32 +73,32 @@
                     <div class="row">
                       <span class="text-muted fs-7">Gender</span>
                       <div class="col mb-3">
-                          
+
                         <div class="border rounded p-2">
                           <label class="form-check-label" for="flexRadioDefault1">Male </label>
                          <input class="gender-radio" type="radio" name="flexRadioDefault" value="male" id="flexRadioDefault1" (change)="radioChangeHandler($event)"/>
-                        
-                       
+
+
                         </div>
                       </div>
                       <div class="col mb-3">
-                        
+
                         <div class="border rounded p-2">
                           <label class="form-check-label" for="flexRadioDefault1">Female</label>
                           <input class="gender-radio" type="radio" name="flexRadioDefault" value="female" id="flexRadioDefault2" (change)="radioChangeHandler($event)"/>
                         </div>
-                    
+
                       </div>
                       <div class="col mb-3">
-                          
+
                         <div class="border rounded p-2">
                           <label class="form-check-label" for="flexRadioDefault1">Custom</label>
                           <input class="gender-radio" type="radio" name="flexRadioDefault" value="custom" id="flexRadioDefault3" (change)="radioChangeHandler($event)"/>
                         </div>
-                    
+
                     </div>
                     </div>
-                   
+
                     <!-- gender select -->
                     <div class="genderSelect" *ngIf="selectedGender == 'custom'">
                     <div id="genderSelect">
@@ -189,5 +189,5 @@
         </div>
       </div>
     </footer>
-    
-    </body>
+
+  </div>

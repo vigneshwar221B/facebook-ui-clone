@@ -35,7 +35,7 @@
           <li id="space1"></li>
           <!-- Right Elements start -->
           <li>
-            <div class="profile" (click)="activeProfile()" [ngClass]="{'profileActive':profileStatus}" >
+            <div class="profile" (click)="activeProfile()" routerLink="/profile" [ngClass]="{'profileActive':profileStatus}" >
               <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture" >
               <div class="name">Mark</div>
             </div>
@@ -49,12 +49,15 @@
       </ul>
   </div>
 </header>
+<!-- <div>
+  <app-side-container [display]="display"></app-side-container>
+</div> -->
 <div *ngIf="accountStatus" class="sideContainer" id="account">
   <div class="top-section">
     <div class="img">
       <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
     </div>
-    <div class="sidecon-first-text">
+    <div class="sidecon-first-text" routerLink="/profile">
       <div class="name">Mark Zuckerberg</div>
       <a class="profile-link">See your profile</a>
     </div>
@@ -101,7 +104,7 @@
       <mat-icon>navigate_next</mat-icon>
     </div>
     </div>
-  <div class="third-session" id="third-session-4">
+  <div class="third-session" id="third-session-4" routerLink="/">
     <div class="icon">
       <mat-icon>logout</mat-icon>
     </div>
