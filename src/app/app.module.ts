@@ -45,6 +45,15 @@ import { ProfileIconComponent } from './home/components/profile-icon/profile-ico
 import { CreateRoomComponent } from './home/components/create-room/create-room.component';
 import { ProfileCardComponent } from './home/components/profile-card/profile-card.component';
 import { CreateStoryComponent } from './create-story/create-story.component';
+import { SideNavMarketplaceComponent } from './marketplace/side-navbar/side-nav-marketplace/side-nav-marketplace.component';
+import { SideNavMarketplaceitemsComponent } from './marketplace/side-navbar/side-nav-marketplaceitems/side-nav-marketplaceitems.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from 'src/environments/environment';
+import { WatchCardComponent } from './watch/watch-card/watch-card.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +87,11 @@ import { CreateStoryComponent } from './create-story/create-story.component';
     CreateRoomComponent,
     ProfileCardComponent,
     CreateStoryComponent,
+    SideNavMarketplaceComponent,
+    SideNavMarketplaceitemsComponent,
+    WatchCardComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -90,6 +104,11 @@ import { CreateStoryComponent } from './create-story/create-story.component';
     MatCardModule,
     MatDividerModule,
     MatSidenavModule,
+    HttpClientModule,   
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule // storage
   ],
   providers: [],
   bootstrap: [AppComponent],

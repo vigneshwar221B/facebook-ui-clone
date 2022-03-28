@@ -11,7 +11,8 @@ export class ContactItemComponent implements OnInit {
   @Input() friend: User = {
     name: '',
     profileImg: '',
-    active: false
+    active: false,
+    mutual: 0,
   };
 
   constructor() { }
