@@ -9,18 +9,17 @@ import { WatchComponent } from './watch/watch.component';
 import { MarketplaceComponent } from './marketplace/marketplace.component';
 import { GroupsComponent } from './groups/groups.component';
 import { GamingComponent } from './gaming/gaming.component';
-import { ProfileComponent } from './profile/profile.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import {
   FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
-import {MatCardModule} from '@angular/material/card';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { CreatePostComponent } from './home/create-post/create-post.component';
@@ -47,7 +46,6 @@ import { CreateRoomComponent } from './home/components/create-room/create-room.c
 import { ProfileCardComponent } from './home/components/profile-card/profile-card.component';
 import { CreateStoryComponent } from './create-story/create-story.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +55,6 @@ import { CreateStoryComponent } from './create-story/create-story.component';
     MarketplaceComponent,
     GroupsComponent,
     GamingComponent,
-    ProfileComponent,
     AuthPageComponent,
     CreatePostComponent,
     SideNavComponent,
@@ -81,8 +78,6 @@ import { CreateStoryComponent } from './create-story/create-story.component';
     CreateRoomComponent,
     ProfileCardComponent,
     CreateStoryComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -94,7 +89,7 @@ import { CreateStoryComponent } from './create-story/create-story.component';
     MatButtonModule,
     MatCardModule,
     MatDividerModule,
-    MatSidenavModule
+    MatSidenavModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
