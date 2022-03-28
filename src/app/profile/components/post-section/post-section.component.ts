@@ -45,8 +45,8 @@ export class PostSectionComponent implements OnInit {
               },
             ],
             reacted: {
-              name: 'Haha',
-              type: 'haha',
+              name: 'Love',
+              type: 'love',
             },
             comments: [
               {
@@ -70,7 +70,7 @@ export class PostSectionComponent implements OnInit {
             reactions: [
               {
                 name: 'You',
-                type: 'love',
+                type: 'like',
               },
             ],
             reacted: {
