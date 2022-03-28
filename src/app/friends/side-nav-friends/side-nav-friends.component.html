@@ -1,0 +1,20 @@
+<div class="sidebar">
+  <div class="head">
+    <div class="heading">Friends</div>
+    <div class="icon">
+      <i></i>
+    </div>
+  </div>
+  <div *ngIf="data==='friends'">
+    <app-side-nav-friend-items *ngFor="let sideNav of friendSideNav" [sideNav]="sideNav">
+
+    </app-side-nav-friend-items>
+  </div>
+  <div *ngIf="data==='watch'">
+    <app-side-nav-friend-items *ngFor="let sideNav of watchSideNav" [sideNav]="sideNav">
+
+    </app-side-nav-friend-items>
+  </div>
+
+
+</div>

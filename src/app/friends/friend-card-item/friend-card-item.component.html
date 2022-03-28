@@ -1,0 +1,23 @@
+<div class="friend-card-item" ><!--[ngClass]="friendrequest.item==='Home' ? 'nav-side-container-active' : ''"-->
+  <!-- name : 'Deepika Sanna',
+  work : 'Programmer at Meta',
+  education : 'Studied at Harvard University',
+  image_url :  -->
+  <div class="card-image" >
+   <img src="{{friendrequest.image_url}}" alt="profile-pic"/>
+  </div>
+  <div class="card-content">
+    <div class="name">{{friendrequest.name}}</div>
+    <div class="mutual-friends">
+      <div class="images">
+        <img src="https://www.photopills.com/sites/default/files/tutorials/2020/sunrise-cover.jpg" alt="friend1" class="friend1"/>
+        <img src="https://www.photopills.com/sites/default/files/tutorials/2020/sunrise-cover.jpg" alt="friend2" class="friend2">
+      </div>
+      <div class="count">{{friendrequest.mutual_friends}} mutual friends</div>
+    </div>
+    <div class="button">
+      <button class="add">{{button1}}</button>
+      <button class="remove" (click)="removeElement(friendrequest.name)">{{button2}}</button>
+    </div>
+  </div>
+</div>

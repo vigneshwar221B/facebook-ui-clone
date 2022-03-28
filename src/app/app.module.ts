@@ -35,6 +35,12 @@ import { ContactsListComponent } from './home/components/contacts-list/contacts-
 import { ContactItemComponent } from './home/components/contact-item/contact-item.component';
 import { SponsersListComponent } from './home/components/sponsers-list/sponsers-list.component';
 import { SponserItemComponent } from './home/components/sponser-item/sponser-item.component';
+import { FriendsComponent } from './friends/friends.component';
+import { SideNavFriendsComponent } from './friends/side-nav-friends/side-nav-friends.component';
+import { SideNavFriendItemsComponent } from './friends/side-nav-friend-items/side-nav-friend-items.component';
+import { FriendCardsComponent } from './friends/friend-cards/friend-cards.component';
+import { FriendCardItemComponent } from './friends/friend-card-item/friend-card-item.component';
+import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +65,12 @@ import { SponserItemComponent } from './home/components/sponser-item/sponser-ite
     ContactItemComponent,
     SponsersListComponent,
     SponserItemComponent,
+    FriendsComponent,
+    SideNavFriendsComponent,
+    SideNavFriendItemsComponent,
+    FriendCardsComponent,
+    FriendCardItemComponent,
+    PopDetailComponent,
 
   ],
   imports: [

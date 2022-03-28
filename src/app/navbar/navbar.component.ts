@@ -23,7 +23,6 @@ export class NavbarComponent implements OnInit {
     this.accountStatus=false;
   }
   rightNavActive(index: number): void {
-    this.activeTab=0;
     console.log(index);
     this.rightActiveTab = this.rightActiveTab===index?0:this.rightActiveTab = index;
     if(index===5){

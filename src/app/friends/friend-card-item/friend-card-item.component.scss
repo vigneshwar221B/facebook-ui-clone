@@ -1,0 +1,95 @@
+@mixin flexProp($justify: center, $align: center, $flex-dir: row, $wrap: wrap){
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex-dir;
+  flex-wrap: $wrap;
+}
+@mixin roundDiv($width: 200px,$height:200px,$size: 10px) {
+  width: $width;
+  height: $height;
+  border-radius: $size;
+}
+.friend-card-item{
+  @include flexProp(flex-start,none, column, wrap);
+  @include roundDiv(200px,345px,6px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  margin:8px 8px 8px 0px;
+  background-color: white;
+}
+.card-image{
+  img{
+    @include roundDiv(198px,198px,1px);
+    margin:1px;
+  }
+}
+.card-content{
+  margin:8px;
+  .name{
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding:1px;
+    cursor: pointer;
+  }
+  .name:hover{
+    text-decoration: underline;
+  }
+  .mutual-friends{
+    @include flexProp(flex-start,center, row, none);
+    margin:5px 0px;
+    .images{
+      position:relative;
+      @include roundDiv(20px,20px,none);
+       img{
+        @include roundDiv(16px,16px,50%);
+        border:1px solid #f0f2f5;
+      }
+      .friend1{
+        position:absolute;
+        top:2;
+        left:0px;
+        z-index:10;
+      }
+      .friend2{
+        position:absolute;
+        display:block;
+        top:0;
+        left:8px;
+      }
+    }
+    .count{
+      margin-top: -5px;
+      margin-left: 5px;
+      font-weight: 400;
+      color:#65676b;
+      font-size: 0.9rem;
+    }
+  }
+  .button{
+    display: flex;
+    flex-direction: column;
+    padding:0px 5px;
+    width:100%;
+    .add,.remove{
+      border-radius: 6px;
+      height:33px;
+      margin:2px 0px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border:none;
+    }
+    .add{
+      color:#1877F2;
+      background-color: #e7f3ff;
+    }
+    .add:hover{
+      background-color: #d5e8fc;
+    }
+    .remove{
+      background-color: #e4e6eb;
+    }
+    .remove:hover{
+      background-color: #dbdcdf;
+    }
+  }
+}
