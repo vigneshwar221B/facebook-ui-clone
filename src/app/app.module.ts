@@ -54,6 +54,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { SideContainerComponent } from './navbar/side-container/side-container.component';
 
 
 @NgModule({
@@ -90,7 +91,8 @@ import { environment } from 'src/environments/environment';
     ProfileCardComponent,
     CreateStoryComponent,
     SideNavMarketplaceComponent,
-    SideNavMarketplaceitemsComponent
+    SideNavMarketplaceitemsComponent,
+    SideContainerComponent
 
 
   ],

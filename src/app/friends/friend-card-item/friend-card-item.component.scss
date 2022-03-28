@@ -101,6 +101,7 @@
 .tip {
  // width:100%;
   position: relative;
+  cursor:pointer;
 }
 .tip::after {
   content: attr(datatooltip);
