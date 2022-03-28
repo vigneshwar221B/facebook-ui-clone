@@ -57,6 +57,38 @@ export class SideNavFriendsComponent implements OnInit {
     }
   ]
   //watch side navbar
-  watchSideNav=[];
+  watchSideNav=[
+    {
+      item: 'Home',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yK/r/qtKPMKHkVql.png',//https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/-wm-fqdtvDt.png
+      background_position:'0px -482px',//'0px -630px',
+      background_size: '26px 1106px',//'26px 1400px',
+      arrow_icon:false,
+    },
+    {
+      item: 'Live',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/QsYISwis8MQ.png',
+      background_position:'0px -261px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+    {
+      item: 'Shows',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/QsYISwis8MQ.png',
+      background_position:'0px -282px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+    {
+      item: 'Saved Items  ',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/QsYISwis8MQ.png',
+      background_position:'0px -240px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+
+  ];
 
 }
+
+
