@@ -11,7 +11,8 @@ import { GroupsComponent } from './groups/groups.component';
 import { GamingComponent } from './gaming/gaming.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthPageComponent } from './auth-page/auth-page.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import {
   FontAwesomeModule,
   FaIconLibrary,
@@ -41,6 +42,8 @@ import { SideNavFriendItemsComponent } from './friends/side-nav-friend-items/sid
 import { FriendCardsComponent } from './friends/friend-cards/friend-cards.component';
 import { FriendCardItemComponent } from './friends/friend-card-item/friend-card-item.component';
 import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
+import { CreateStoryComponent } from './create-story/create-story.component';
+
 
 @NgModule({
   declarations: [
@@ -71,6 +74,8 @@ import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
     FriendCardsComponent,
     FriendCardItemComponent,
     PopDetailComponent,
+    CreateStoryComponent,
+
 
   ],
   imports: [
@@ -82,7 +87,8 @@ import { PopDetailComponent } from './friends/pop-detail/pop-detail.component';
     MatMenuModule,
     MatButtonModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent],
