@@ -17,7 +17,7 @@ export class PostSectionComponent implements OnInit {
   openDialog() {
     this.dialog.open(CreatePostDialogComponent, {
       width: '500px',
-      height: '70vh'
+      height: '75vh'
     });
   }
 
