@@ -89,6 +89,37 @@ export class SideNavFriendsComponent implements OnInit {
 
   ];
 
+  gamingSideNav=[
+    {
+      item: 'For you',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yE/r/2lppLqceUSM.png',//https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/-wm-fqdtvDt.png
+      background_position:'0px -304px',//'0px -630px',
+      background_size: 'auto',//'26px 1400px',
+      arrow_icon:false,
+    },
+    {
+      item: 'Video',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yV/r/QsYISwis8MQ.png',
+      background_position:'0px -261px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+    {
+      item: 'Tournaments',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/RH2eOrQgvUa.png',
+      background_position:'0px -84px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+    {
+      item: 'Play Games  ',
+      img_url:'https://static.xx.fbcdn.net/rsrc.php/v3/yg/r/MoijRk0G5SA.png',
+      background_position:'0px -531px',
+      background_size: 'auto',
+      arrow_icon:true,
+    },
+  ];
+
 }
 
 
