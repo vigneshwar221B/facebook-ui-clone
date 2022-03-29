@@ -6,11 +6,11 @@
   </div>
   <!-- description popup card (onhover) starts-->
   <div class="model" *ngIf="openDescription">
-    <app-pop-detail [details]="friendrequest"></app-pop-detail>
+    <app-pop-detail (mouseleave) ="mouseLeave()" [details]="friendrequest"></app-pop-detail>
   </div>
   <!-- description popup card (onhover) ends-->
-  <div class="card-content">
-    <div class="name" (mouseenter) ="mouseEnter()" (mouseleave) ="mouseLeave()">{{friendrequest.name}}</div>
+  <div class="card-content" (mouseleave) ="mouseLeave()">
+    <div class="name" (mouseenter) ="mouseEnter()" >{{friendrequest.name}}</div>
     <div *ngIf="friendrequest.accept==='neutral'">
       <div class="mutual-friends">
         <div *ngIf="friendrequest.mutual_friends>0" class="images">
