@@ -18,7 +18,7 @@ export class CreatePostComponent implements OnInit {
     txtFld.blur();
     const dialogRef = this.dialog.open(CreatePostDialogComponent, {
       width: '500px',
-      height: '70vh',
+      height: '75vh',
     });
 
   }
