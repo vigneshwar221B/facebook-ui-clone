@@ -29,12 +29,13 @@ header {
 }
 div ul {
   margin: 0;
-  padding: 0px 15px;
+  padding: 0 15px;
+  height: 3.5rem;
   list-style: none;
-  @include flex("", "", "", "");
+  @include flex("", "", "", flex-end);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   li {
-    padding: 8px 3px;
+    padding: 0 3px;
     a {
       display: inline-block;
       text-decoration: none;
@@ -44,13 +45,13 @@ div ul {
       color: rgb(158, 158, 158);
     }
     #fb {
-      background: $primary-color;
-      color: #fff;
+      background: #fff;
+      color: $primary-color;
       width: 40px;
       height: 40px;
       border-radius: 50%;
       @include flex("", "", center, center);
-      font-size: 30px;
+      font-size: 300%;
       z-index: -1;
     }
   }
@@ -77,7 +78,7 @@ form {
   pointer-events: auto;
   height: 38px;
   border-radius: 30px;
-  padding: 5px;
+  // padding: 5px;
   width: 75%;
   margin-left: 20%;
   background-color: #f0f2f5;
@@ -168,13 +169,14 @@ div ul li {
     font-size: 1rem;
     color: #444;
     background: rgba(0, 0, 0, 0.068);
-    border: none;
+    border: 3px solid white;
     outline: none;
     border-radius: 50%;
     cursor: pointer;
   }
 }
 div ul {
+  min-height: fit-content;
   li:hover #btn_plus,
   li:hover #btn_add,
   li:hover #btn_msg,
@@ -241,6 +243,29 @@ div ul li #btn_add {
   }
 }
 div ul {
+  li {
+    #home,
+    #marketplace,
+    #tv,
+    #gaming,
+    #friend {
+      height: 3.7rem;
+    }
+
+    #fb,
+    #btn_plus,
+    #btn_add,
+    #btn_msg,
+    #btn_bell,
+    #btn_profile {
+      margin-bottom: 0.5rem;
+    }
+
+    .profile {
+      margin-bottom: 0.8rem;
+    }
+  }
+
   li:hover #home,
   li:hover #marketplace,
   li:hover #tv,
@@ -248,18 +273,23 @@ div ul {
   li:hover #friend,
   li:hover #more {
     background: rgba(48, 46, 46, 0.1);
-    //color: #444;
-    border-radius: 5px;
+    color: #444;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
 .center mat-icon {
   font-size: 130%;
+  // height: 6rem;
 }
 .active {
   color: #0b84ed !important;
-  padding-bottom: 2px;
   border-bottom: 3px solid #0b84ed;
-  transition: 0s;
+  transition: 0.1s;
+}
+.noactive {
+  border-bottom: 3px solid white;
+  transition: 0.1s;
 }
 
 .rightNavFocus {
@@ -295,16 +325,15 @@ div ul {
 div ul li #btn_profile::after {
   margin-left: -20px;
 }
-@media screen and (max-width: 1110px){
+@media screen and (max-width: 1110px) {
   div ul li {
     #home,
     #marketplace,
     #gaming,
     #friend,
-    #tv
-    {
-      padding:0px 0px;
-      margin:0px 20px;
+    #tv {
+      padding: 0px 0px;
+      margin: 0px 20px;
     }
   }
 }
@@ -380,7 +409,7 @@ div ul li #btn_profile::after {
     }
   }
 }
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
   .select {
     form {
       width: 50%;
@@ -440,7 +469,6 @@ div ul li #btn_profile::after {
   :root {
     --btn-width-100: 60px;
   }
-
 }
 
 /*side bar container*/
@@ -468,13 +496,14 @@ div ul li #btn_profile::after {
     height: 35px;
     border-radius: 50%;
     padding: 1px 7px;
+    padding-top: 7.5px;
     font-size: 26px;
     background-color: #e0e0e0;
   }
-  mat-icon {
-    font-size: 90%;
-    margin-top: 5px;
-  }
+  // mat-icon {
+  //   font-size: 90%;
+  //   margin-top: 5px;
+  // }
   .profile-link {
     color: #828890;
   }
@@ -512,6 +541,7 @@ div ul li #btn_profile::after {
     @include flex(row, wrap, flex-start, center);
     .icon {
       padding: 0px 6px;
+      padding-top: 6px;
     }
   }
   .arrow {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CreatePostDialogComponent } from '../create-post-dialog/create-post-dialog.component';
 
 @Component({
   selector: 'app-create-post',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreatePostComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(txtFld: HTMLElement) {
+    txtFld.blur();
+    const dialogRef = this.dialog.open(CreatePostDialogComponent, {
+      width: '500px',
+      height: '70vh',
+    });
+
   }
 
 }
