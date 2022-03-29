@@ -2,11 +2,33 @@
   class="main-carousel"
   data-flickity='{ "contain": true, "wrapAround": true, "pageDots": false }'
 >
-  <div class="carousel-cell" *ngFor="let vid of vidLinks">
+  <div class="carousel-cell">
     <iframe
       height="100%"
       width="100%"
-      [src]="sanitizer.bypassSecurityTrustResourceUrl(vid)"
+      src="https://www.youtube.com/embed/QsHWebfAwpY"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="carousel-cell">
+    <iframe
+      height="100%"
+      width="100%"
+      src="https://www.youtube.com/embed/Wrdh5HrOCMc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="carousel-cell">
+    <iframe
+      height="100%"
+      width="100%"
+      src="https://www.youtube.com/embed/hnM8qGvDH60"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
