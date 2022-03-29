@@ -59,6 +59,9 @@ import { SidebarComponent } from './gaming/sidebar/sidebar.component';
 import { CarouselComponent } from './gaming/carousel/carousel.component';
 import { FeaturedGamesComponent } from './gaming/featured-games/featured-games.component';
 import { PostsComponent } from './gaming/posts/posts.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { CreatePostDialogComponent } from './home/components/create-post-dialog/create-post-dialog.component';
+import { ModalComponent } from './auth-page/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -100,6 +103,8 @@ import { PostsComponent } from './gaming/posts/posts.component';
     CarouselComponent,
     FeaturedGamesComponent,
     PostsComponent,
+    CreatePostDialogComponent,
+    ModalComponent,
 
 
   ],
@@ -118,7 +123,8 @@ import { PostsComponent } from './gaming/posts/posts.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule, // storage
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

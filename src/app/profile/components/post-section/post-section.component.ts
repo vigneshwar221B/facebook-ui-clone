@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CreatePostDialogComponent } from 'src/app/home/components/create-post-dialog/create-post-dialog.component';
 
 @Component({
   selector: 'app-post-section',
@@ -8,9 +10,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PostSectionComponent implements OnInit {
   @Input() friendsList: any;
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  openDialog() {
+    this.dialog.open(CreatePostDialogComponent, {
+      width: '500px',
+      height: '70vh'
+    });
+  }
 
   photos = [
     'https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/274693439_10114340420219721_7126909141974919066_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YZ47KWDwnLIAX8gjJqY&_nc_ht=scontent.fixm4-1.fna&oh=00_AT_YeVj1hq5S-HqVhOzlDlsCgoeISPYAqVKYbMdMg9_wTA&oe=62439039',
