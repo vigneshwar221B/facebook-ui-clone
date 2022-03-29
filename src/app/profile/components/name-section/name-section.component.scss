@@ -178,3 +178,26 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .name-section {
+    flex-direction: column;
+    align-items: center;
+
+    .name {
+      flex-direction: column;
+      align-items: center;
+
+      .display-content {
+        align-items: center;
+      }
+
+      .options {
+        position: static;
+        bottom: unset;
+        right: unset;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
