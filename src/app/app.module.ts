@@ -57,6 +57,7 @@ import { SideContainerComponent } from './navbar/side-container/side-container.c
 import { WatchCardComponent } from './watch/watch-card/watch-card.component';
 import { SidebarComponent } from './gaming/sidebar/sidebar.component';
 import { CarouselComponent } from './gaming/carousel/carousel.component';
+import { FeaturedGamesComponent } from './gaming/featured-games/featured-games.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { CarouselComponent } from './gaming/carousel/carousel.component';
     WatchCardComponent,
     SidebarComponent,
     CarouselComponent,
+    FeaturedGamesComponent,
 
 
   ],
