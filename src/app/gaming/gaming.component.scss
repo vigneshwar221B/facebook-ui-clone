@@ -2,9 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column-reverse;
+  flex-flow: row;
+  margin-top: 3.5rem;
+  margin-left: 20rem;
+}
+.main{
+display: flex;
+flex-direction: column;
+}
+.side-nav{
   margin-top: 3.5rem;
 }
-
 // div{
 //   border: 2px red dotted;
 // }
