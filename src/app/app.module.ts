@@ -55,6 +55,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { SideContainerComponent } from './navbar/side-container/side-container.component';
 import { WatchCardComponent } from './watch/watch-card/watch-card.component';
+import { SidebarComponent } from './gaming/sidebar/sidebar.component';
+import { CarouselComponent } from './gaming/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { WatchCardComponent } from './watch/watch-card/watch-card.component';
     SideNavMarketplaceitemsComponent,
     SideContainerComponent,
     WatchCardComponent,
+    SidebarComponent,
+    CarouselComponent,
 
 
   ],
