@@ -113,8 +113,11 @@ mat-menu-item{
 }
 .avatar-card{
   float:right;
-  margin-left:50px ;
+
   text-decoration:underline ;
+}
+.avatar-card mat-icon{
+  margin-right: 0;
 }
 .avatar-menu img{
 
