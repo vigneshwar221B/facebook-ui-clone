@@ -1,4 +1,6 @@
+import { PostcardService } from './../../../services/postcard.service';
 import { Component, Input, OnInit } from '@angular/core';
+import { postcard } from 'src/app/interfaces/Postcard';
 
 @Component({
   selector: 'app-post-card',
@@ -6,11 +8,19 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post-card.component.scss']
 })
 export class PostCardComponent implements OnInit {
-
-
-  constructor() { }
+  postcardobj:postcard[]=[]
+  public postcardarr:Array<postcard>=[];
+  constructor(private PostcardService:PostcardService) { }
 
   ngOnInit(): void {
+
+  this.PostcardService.getData().subscribe((data:any)=>{
+   console.log(data);
+    this.postcardobj=data;
+    console.log(this.postcardobj);
+    this.postcardarr=(Object.values(this.postcardobj));
+    console.log(this.postcardarr);
+  });
   }
 
   postdata=[
