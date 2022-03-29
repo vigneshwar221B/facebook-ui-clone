@@ -1,9 +1,9 @@
 
 <div class="main">
-  <mat-card class="post" *ngFor="let data of watchdata">
+  <mat-card class="post" *ngFor="let data of d">
 <mat-card-title-group>
       <mat-card-title class="watch-username" >
-        <img mat-card-avatar class="watch-user-dp"src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg">
+        <img mat-card-avatar class="watch-user-dp"src={{data.user_dp}}>
        <div class="space"><span></span></div>
        <p> {{data.username}}
         <mat-card-subtitle class="hours">
