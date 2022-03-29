@@ -41,7 +41,7 @@ export class FriendCardsComponent implements OnInit {
     {
       name : 'Kevin Systrom ',
       work : 'Programmer & Entrepreneur and founder of Instagram',
-      location : 'loc:From Holliston, Massachusetts',
+      education : 'NYU Stern School of Business',
       image_url : 'https://www.bing.com/th?id=AMMS_6401f02989627919a8d6c6b4f20e1d9b&w=120&h=160&c=12&rs=1&qlt=80&o=6&cdv=1&dpr=1.5&rf=Placeholder-Person_60x60.png&pid=16.2',
       mutual_friends : '6',
       friends_url:['https://www.photopills.com/sites/default/files/tutorials/2020/sunrise-cover.jpg'],
