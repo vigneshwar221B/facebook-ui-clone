@@ -98,3 +98,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .menu-section {
+    .menu-list {
+      flex-wrap: wrap;
+      overflow: hidden;
+      height: 3.9rem;
+    }
+  }
+}
