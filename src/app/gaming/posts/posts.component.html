@@ -1,5 +1,5 @@
 <div class="main">
-  <mat-card class="post" *ngFor="let item of posts">
+  <mat-card class="post">
     <mat-card-title-group>
       <mat-card-title class="watch-username">
         <img
@@ -9,9 +9,9 @@
         />
         <div class="space"><span></span></div>
         <p>
-          <b>{{ item.name }}</b> is playing <b>{{ item.game }}</b> 🎮
+          <b>name</b> is playing <b>game</b> 🎮
           <mat-card-subtitle class="hours">
-            {{ item.date }} <mat-icon>visibilty</mat-icon>
+            feb 1 <mat-icon>visibilty</mat-icon>
           </mat-card-subtitle>
         </p>
       </mat-card-title>
@@ -20,7 +20,7 @@
     <iframe
       width="800"
       height="400"
-      [src]="sanitizer.bypassSecurityTrustResourceUrl(item.vidUrl)"
+      src="https://www.youtube.com/embed/p4QG59y6FGE"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -30,7 +30,143 @@
     <mat-card-footer>
       <div class="buttons">
         <button mat-button [matMenuTriggerFor]="menu">
-          <mat-icon style="font-size: medium; text-indent: -5px">thumb_up_outline</mat-icon>like
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >thumb_up_outline</mat-icon
+          >like
+        </button>
+
+        <mat-menu #menu="matMenu" yPosition="below">
+          <button mat-menu-item class="like-button">
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"
+            /><img
+              src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"
+            />
+            <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif" /><img
+              src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"
+            /><img
+              src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"
+            /><img
+              src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"
+            />
+          </button>
+        </mat-menu>
+
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >chat_bubble</mat-icon
+          >comment
+        </button>
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px">reply</mat-icon
+          >share
+        </button>
+      </div>
+      <p></p>
+    </mat-card-footer>
+  </mat-card>
+
+  <mat-card class="post">
+    <mat-card-title-group>
+      <mat-card-title class="watch-username">
+        <img
+          mat-card-avatar
+          class="watch-user-dp"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg"
+        />
+        <div class="space"><span></span></div>
+        <p>
+          <b>name 2</b> is playing <b>game 2</b> 🎮
+          <mat-card-subtitle class="hours">
+            feb 2 <mat-icon>visibilty</mat-icon>
+          </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe
+      width="800"
+      height="400"
+      src="https://www.youtube.com/embed/-dCIPjxH3wU"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <mat-card-footer>
+      <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >thumb_up_outline</mat-icon
+          >like
+        </button>
+
+        <mat-menu #menu="matMenu" yPosition="below">
+          <button mat-menu-item class="like-button">
+            <img
+              src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"
+            /><img
+              src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"
+            />
+            <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif" /><img
+              src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"
+            /><img
+              src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"
+            /><img
+              src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"
+            />
+          </button>
+        </mat-menu>
+
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >chat_bubble</mat-icon
+          >comment
+        </button>
+        <button mat-button>
+          <mat-icon style="font-size: medium; text-indent: -5px">reply</mat-icon
+          >share
+        </button>
+      </div>
+      <p></p>
+    </mat-card-footer>
+  </mat-card>
+
+  <mat-card class="post">
+    <mat-card-title-group>
+      <mat-card-title class="watch-username">
+        <img
+          mat-card-avatar
+          class="watch-user-dp"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg"
+        />
+        <div class="space"><span></span></div>
+        <p>
+          <b>name 3</b> is playing <b>game 3</b> 🎮
+          <mat-card-subtitle class="hours">
+            feb 3 <mat-icon>visibilty</mat-icon>
+          </mat-card-subtitle>
+        </p>
+      </mat-card-title>
+    </mat-card-title-group>
+
+    <iframe
+      width="800"
+      height="400"
+      src="https://www.youtube.com/embed/uIt298IgFhk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    <mat-card-footer>
+      <div class="buttons">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <mat-icon style="font-size: medium; text-indent: -5px"
+            >thumb_up_outline</mat-icon
+          >like
         </button>
 
         <mat-menu #menu="matMenu" yPosition="below">

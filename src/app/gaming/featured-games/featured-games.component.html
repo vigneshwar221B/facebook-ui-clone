@@ -2,7 +2,8 @@
   featured games
   <div
     class="main-carousel"
-    data-flickity='{ "cellAlign": "left", "contain": true, "pageDots": false }'
+    style="margin-top: 2%"
+    [flickity]="{ cellAlign: 'left', contain: true, pageDots: false }"
   >
     <div class="outer carousel-cell" *ngFor="let item of games">
       <img [src]="item.img" alt="" />
