@@ -15,6 +15,7 @@ export class FriendCardItemComponent implements OnInit {
   @Output() acceptStatus = new EventEmitter<Status>();
   update={} as Status;
   friendsList:string='';
+  openDescription:boolean = false;
   constructor() {
   }
 
@@ -31,5 +32,11 @@ export class FriendCardItemComponent implements OnInit {
     this.update.status= (status==='yes') ? 'Request sent': 'Request cancelled';
     console.log("In child : "+this.update.name+" "+this.update.status);
     this.acceptStatus.emit(this.update);
+  }
+  mouseEnter(){
+   this.openDescription=true;
+  }
+  mouseLeave(){
+    this.openDescription=false;
   }
 }
