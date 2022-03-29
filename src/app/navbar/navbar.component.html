@@ -2,7 +2,7 @@
   <div>
       <ul>
           <!-- Left Elements start  -->
-          <li> <a href="#" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li> <a routerLink="/home" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
           <li>
             <div [ngClass]="{'select':selectForm}" >
               <form class="search-content" >
@@ -25,12 +25,16 @@
 
           <li id="space2"></li>
           <!-- Center Elements start -->
-          <li> <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : ''" data-tooltip="Home" routerLink="/home" id="home" > <mat-icon>home</mat-icon> </a> </li>
-          <li> <a class="tip center" (click)="active(2)" [ngClass]="activeTab===2 ? 'active' : ''" data-tooltip="Friends" routerLink="/friends" id="friend"><mat-icon>group</mat-icon> </a></li>
-          <li> <a class="tip center" (click)="active(3)" [ngClass]="activeTab===3 ? 'active' : ''" data-tooltip="Watch" routerLink="/watch" id="tv"> <mat-icon>ondemand_video</mat-icon> </a> </li>
-          <li> <a class="tip center" (click)="active(4)" [ngClass]="activeTab===4 ? 'active' : ''" data-tooltip="Marketplace" routerLink="/marketplace" id="marketplace">  <mat-icon>store</mat-icon> </a> </li>
-          <li> <a class="tip center" (click)="active(5)" [ngClass]="activeTab===5 ? 'active' : ''" data-tooltip="Gaming" routerLink="/gaming" id="gaming"> <mat-icon>view_quilt</mat-icon> </a> </li>
-          <li> <a class="tip center" (click)="active(6)" [ngClass]="activeTab===5 ? 'active' : ''" data-tooltip="More" href="#" id="more"> <mat-icon>menu</mat-icon> </a> </li>
+          <li> 
+            <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : 'noactive'" data-tooltip="Home" routerLink="/home" id="home" > 
+              <mat-icon>home</mat-icon>
+            </a> 
+          </li>
+          <li> <a class="tip center" (click)="active(2)" [ngClass]="activeTab===2 ? 'active' : 'noactive'" data-tooltip="Friends" routerLink="/friends" id="friend"><mat-icon>group</mat-icon> </a></li>
+          <li> <a class="tip center" (click)="active(3)" [ngClass]="activeTab===3 ? 'active' : 'noactive'" data-tooltip="Watch" routerLink="/watch" id="tv"> <mat-icon>ondemand_video</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(4)" [ngClass]="activeTab===4 ? 'active' : 'noactive'" data-tooltip="Marketplace" routerLink="/marketplace" id="marketplace">  <mat-icon>store</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(5)" [ngClass]="activeTab===5 ? 'active' : 'noactive'" data-tooltip="Gaming" routerLink="/gaming" id="gaming"> <mat-icon>view_quilt</mat-icon> </a> </li>
+          <li> <a class="tip center" (click)="active(6)" [ngClass]="activeTab===5 ? 'active' : 'noactive'" data-tooltip="More" href="#" id="more"> <mat-icon>menu</mat-icon> </a> </li>
           <!-- Center Elements ends -->
           <li id="space1"></li>
           <!-- Right Elements start -->

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'app-auth-page',
@@ -11,7 +13,7 @@ export class AuthPageComponent implements OnInit {
   years = [2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009,2008,2007,2006,2005,2004,2003,2002,2001,2000,1999,1998,1997,1996,1995];
   selectedGender = '';
   toggleModel:boolean=false;
-  constructor() {
+  constructor(public dialog: MatDialog) {
 
    }
 
@@ -22,18 +24,23 @@ export class AuthPageComponent implements OnInit {
   }
   openModel(){
 
-    let createModel = document.getElementById('createModal');
-    if(createModel)
-    {
-      createModel.classList.add('show');
-      createModel.style.display='block';
-      createModel.style.opacity='1';
-      let bodyElement = document.querySelector(".body");//getElementsByClassName('body')[0];
-      console.log(bodyElement);
-     // if(bodyElement)
-        //bodyElement.style.opacity='0.5';//.classList.add('modal-open');
-    }
-     console.log("I'm in - " +createModel);
-    this.toggleModel=!this.toggleModel;
+    // let createModel = document.getElementById('createModal');
+    // if(createModel)
+    // {
+    //   createModel.classList.add('show');
+    //   createModel.style.display='block';
+    //   createModel.style.opacity='1';
+    //   let bodyElement = document.querySelector(".body");//getElementsByClassName('body')[0];
+    //   console.log(bodyElement);
+    //  // if(bodyElement)
+    //     //bodyElement.style.opacity='0.5';//.classList.add('modal-open');
+    // }
+    //  console.log("I'm in - " +createModel);
+    // this.toggleModel=!this.toggleModel;
+    this.dialog.open(ModalComponent, {
+      width: '500px',
+      height: '70vh'
+    });
+
   }
 }
