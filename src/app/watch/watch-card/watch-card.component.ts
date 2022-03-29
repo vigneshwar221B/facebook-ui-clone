@@ -12,7 +12,7 @@ import { Watch } from 'src/app/interfaces/Watch';
 export class WatchCardComponent implements OnInit {
 
   watch:Watch[]=[];
- 
+
   public watchdarr=[];
   str:string="";
  public d:Array<any>=[];
@@ -28,14 +28,14 @@ export class WatchCardComponent implements OnInit {
   this.WatchService.getData().subscribe((data:any)=>{console.log(data);
   this.watch=data;
   this.d=(Object.values(this.watch));
-  
+
 
   this.str=JSON.stringify(this.d);
   var obj = this.str;
   var stringify = JSON.parse(obj);
   var watcharr=[];
   for (var i = 0; i < stringify.length; i++) {
-    
+
     //  dict=(stringify[i][0])
     //  console.log(dict);
     this.dict={
@@ -43,17 +43,17 @@ export class WatchCardComponent implements OnInit {
        'video':this._sanitizer.bypassSecurityTrustResourceUrl(stringify[i]['video']),
        'posted_date':stringify[i]['posted_date'],'no_of_like':stringify[i]['no_of_like'],
        'no_of_comments':stringify[i]['no_of_comments'],'no_of_views':stringify[i]['no_of_views']
-       
+
     };
       // this.ans.push(stringify[i]['name']);
       // this.ans.push(stringify[i]['completed']);
 
-     
+
       watcharr.push(this.dict);
-      
+
       console.log(watcharr);
- 
-  
+
+
   }
   this.d=watcharr;
   });
