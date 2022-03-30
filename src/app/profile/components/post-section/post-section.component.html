@@ -26,11 +26,58 @@
         <div class="intro-text">
           <p>Intro</p>
         </div>
-        <div class="bio-text">
-          <p>Bringing the world closer together.</p>
+        <div class="bio-text" *ngIf="profileBio.length && !canEditBio">
+          <p>{{ profileBio }}</p>
         </div>
-        <div class="intro-btn m-b">
-          <p>Edit Bio</p>
+        <div class="edit-bio-text" *ngIf="canEditBio">
+          <div class="edit-bio-text-input">
+            <textarea
+              class="edit-bio-textarea"
+              [(ngModel)]="profileBioEdited"
+              placeholder="Describe who you are"
+            ></textarea>
+          </div>
+          <div class="remaing-text-count">
+            <p>{{ 101 - profileBioEdited.length }} characters remaining</p>
+          </div>
+          <div class="footer">
+            <div class="to-whom">
+              <i
+                data-visualcompletion="css-img"
+                style="
+                  background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yy/r/FFJlY6jO_92.png');
+                  background-position: 0px -22px;
+                  background-size: 22px 198px;
+                  width: 20px;
+                  height: 20px;
+                  background-repeat: no-repeat;
+                  display: inline-block;
+                "
+              ></i>
+              <p>Public</p>
+            </div>
+            <div class="bio-options">
+              <div class="bio-btn cancel" (click)="cancelBio()">
+                <p>Cancel</p>
+              </div>
+              <button
+                class="bio-btn save"
+                [disabled]="
+                  !profileBioEdited.length ||
+                  101 - profileBioEdited.length < 0 ||
+                  profileBioEdited === profileBio
+                    ? 'disabled'
+                    : ''
+                "
+                (click)="saveBio()"
+              >
+                <p>Save</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="intro-btn m-b" (click)="editBio()" *ngIf="!canEditBio">
+          <p>{{ profileBio.length ? "Edit Bio" : "Add Bio" }}</p>
         </div>
         <div class="intro-item m-t">
           <div class="intro-item-img">
@@ -400,7 +447,8 @@
         <div class="header" *ngIf="post.timeline">
           <div class="title">
             <p>
-              6 friends posted on your <span>timeline</span> for your birthday.
+              {{ post.timeline.birthday && post.timeline.birthday.length }}
+              friends posted on your <span>timeline</span> for your birthday.
             </p>
           </div>
           <div class="icon">
