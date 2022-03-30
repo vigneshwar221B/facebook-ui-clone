@@ -11,4 +11,19 @@ export class CommentsSectionComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  putLike(){
+    console.log(this.reacted)
+    if (this.reacted && this.reacted.type)
+    {
+      this.reacted.name="";
+      this.reacted.type="";
+    }
+    else{
+    this.reacted.type="like";
+    this.reacted.name="Like";
+
+
+    }
+
+  }
 }

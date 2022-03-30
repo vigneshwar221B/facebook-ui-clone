@@ -17,8 +17,27 @@ export class PostSectionComponent implements OnInit {
   openDialog() {
     this.dialog.open(CreatePostDialogComponent, {
       width: '500px',
-      height: '75vh'
+      height: '75vh',
     });
+  }
+
+  profileBio = 'Bringing the world closer together.';
+  profileBioEdited = '';
+  canEditBio = false;
+
+  editBio() {
+    this.canEditBio = true;
+    this.profileBioEdited = this.profileBio;
+  }
+
+  cancelBio() {
+    this.canEditBio = false;
+    this.profileBioEdited = '';
+  }
+
+  saveBio() {
+    this.profileBio = this.profileBioEdited;
+    this.canEditBio = false;
   }
 
   photos = [
@@ -41,7 +60,7 @@ export class PostSectionComponent implements OnInit {
             name: 'Burn Abasse',
             text: 'Happy Birthday',
             img: 'https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-1/276016457_118503230772058_8909624857440009081_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CktQI_jvOK8AX9mpbGg&_nc_ht=scontent.fixm4-1.fna&oh=00_AT_N51QcIEWri0QDOlIyqvpEYabkFlsbY4KC2Mn5YL4r2g&oe=6244AA84',
-            date: '14 May 2022',
+            date: '14 May 2021',
             to: 'Mark Zuckerberg',
             reactions: [
               {
@@ -74,7 +93,7 @@ export class PostSectionComponent implements OnInit {
             name: 'Ogbulata Rolly B Roland',
             text: 'Happy Birthday have a great day',
             img: 'https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-1/276016457_118503230772058_8909624857440009081_n.jpg?stp=c0.0.320.320a_dst-jpg_p320x320&_nc_cat=101&ccb=1-5&_nc_sid=7206a8&_nc_ohc=CktQI_jvOK8AX9mpbGg&_nc_ht=scontent.fixm4-1.fna&oh=00_AT_N51QcIEWri0QDOlIyqvpEYabkFlsbY4KC2Mn5YL4r2g&oe=6244AA84',
-            date: '14 May 2022',
+            date: '14 May 2021',
             to: 'Mark Zuckerberg',
             reactions: [
               {
