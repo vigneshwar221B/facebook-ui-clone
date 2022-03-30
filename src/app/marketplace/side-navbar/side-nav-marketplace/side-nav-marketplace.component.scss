@@ -142,6 +142,9 @@
   margin-bottom: 3%;
 }
 
+.sidebar{
+  display: none;
+}
 .sidebar {
   overflow-y: auto;
 
@@ -178,7 +181,7 @@
   background-color: #aaa; /* or add it to the track */
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1210px) {
   .sidebar {
     width: 360px;
     height: 100%;
