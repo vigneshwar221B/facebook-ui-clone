@@ -25,10 +25,10 @@
 
           <li id="space2"></li>
           <!-- Center Elements start -->
-          <li> 
-            <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : 'noactive'" data-tooltip="Home" routerLink="/home" id="home" > 
+          <li>
+            <a class="tip center" (click)="active(1)" [ngClass]="activeTab===1 ? 'active' : 'noactive'" data-tooltip="Home" routerLink="/home" id="home" >
               <mat-icon>home</mat-icon>
-            </a> 
+            </a>
           </li>
           <li> <a class="tip center" (click)="active(2)" [ngClass]="activeTab===2 ? 'active' : 'noactive'" data-tooltip="Friends" routerLink="/friends" id="friend"><mat-icon>group</mat-icon> </a></li>
           <li> <a class="tip center" (click)="active(3)" [ngClass]="activeTab===3 ? 'active' : 'noactive'" data-tooltip="Watch" routerLink="/watch" id="tv"> <mat-icon>ondemand_video</mat-icon> </a> </li>
@@ -44,11 +44,11 @@
               <div class="name">Mark</div>
             </div>
           </li>
-          <li> <button class="tip" (click)="rightNavActive(1)" [ngClass]="rightActiveTab===1 ? 'rightNavFocus' : ''" data-tooltip="Create" id="btn_add"><mat-icon>add</mat-icon></button> </li>
-          <li> <button class="tip" (click)="rightNavActive(2)" [ngClass]="rightActiveTab===2 ? 'rightNavFocus' : ''" data-tooltip="Menu" id="btn_plus"><mat-icon>apps</mat-icon></button> </li>
-          <li> <button class="tip" (click)="rightNavActive(3)" [ngClass]="rightActiveTab===3 ? 'rightNavFocus' : ''" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger"></i></button></li>
-          <li> <button class="tip" (click)="rightNavActive(4)" [ngClass]="rightActiveTab===4 ? 'rightNavFocus' : ''" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell"></i></button></li>
-          <li> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button>  </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(1)" [ngClass]="rightActiveTab===1 ? 'rightNavFocus' : ''" data-tooltip="Create" id="btn_add"><mat-icon>add</mat-icon></button> </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(2)" [ngClass]="rightActiveTab===2 ? 'rightNavFocus' : ''" data-tooltip="Menu" id="btn_plus"><mat-icon>apps</mat-icon></button> </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(3)" [ngClass]="rightActiveTab===3 ? 'rightNavFocus' : ''" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger"></i></button></li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(4)" [ngClass]="rightActiveTab===4 ? 'rightNavFocus' : ''" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell"></i></button></li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button>  </li>
           <!-- Right Elements ends -->
       </ul>
   </div>
