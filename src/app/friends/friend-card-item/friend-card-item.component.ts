@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Status } from '../interface/status';
+import { Status } from 'src/app/interfaces/status';
+
 
 @Component({
   selector: 'app-friend-card-item',

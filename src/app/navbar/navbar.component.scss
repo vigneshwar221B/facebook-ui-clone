@@ -319,6 +319,11 @@ div ul {
   pointer-events: none;
   user-select: none;
 }
+.right{
+  .tip::after{
+    bottom: -130%;
+  }
+}
 .tip:hover::after {
   opacity: 1;
 }
