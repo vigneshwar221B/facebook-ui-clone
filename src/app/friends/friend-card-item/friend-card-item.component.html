@@ -1,6 +1,6 @@
 <!--  "tip center" data-tooltip="Home"  -->
 
-<div class="friend-card-item" >
+<div class="friend-card-item" (mouseleave) ="mouseLeave()">
   <div class="card-image" >
    <img src="{{friendrequest.image_url}}" alt="profile-pic"/>
   </div>
@@ -9,7 +9,7 @@
     <app-pop-detail (mouseleave) ="mouseLeave()" [details]="friendrequest"></app-pop-detail>
   </div>
   <!-- description popup card (onhover) ends-->
-  <div class="card-content" (mouseleave) ="mouseLeave()">
+  <div class="card-content">
     <div class="name" (mouseenter) ="mouseEnter()" >{{friendrequest.name}}</div>
     <div *ngIf="friendrequest.accept==='neutral'">
       <div class="mutual-friends">
