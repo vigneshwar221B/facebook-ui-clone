@@ -7,9 +7,16 @@ import { CoverSectionComponent } from './components/cover-section/cover-section.
 import { NameSectionComponent } from './components/name-section/name-section.component';
 import { MenuSectionComponent } from './components/menu-section/menu-section.component';
 import { PostSectionComponent } from './components/post-section/post-section.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ProfileComponent, CoverSectionComponent, NameSectionComponent, MenuSectionComponent, PostSectionComponent],
-  imports: [CommonModule, ProfileRoutingModule],
+  declarations: [
+    ProfileComponent,
+    CoverSectionComponent,
+    NameSectionComponent,
+    MenuSectionComponent,
+    PostSectionComponent,
+  ],
+  imports: [CommonModule, ProfileRoutingModule, FormsModule],
 })
 export class ProfileModule {}

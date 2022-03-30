@@ -110,6 +110,125 @@
           //   border-bottom: 1px solid #e4e6eb;
         }
 
+        .edit-bio-text {
+          display: flex;
+          flex-direction: column;
+
+          .edit-bio-text-input {
+            text-align: justify;
+
+            .edit-bio-textarea {
+              white-space: normal;
+              text-align: justify;
+              -moz-text-align-last: center; /* Firefox 12+ */
+              text-align-last: center;
+              height: 80px;
+              width: 100%;
+              border: none;
+              outline: none;
+              resize: none;
+              font-size: 0.9rem;
+              padding: 0.5rem;
+              border-radius: 5px;
+              background-color: #e4e6eb;
+              font-weight: 600;
+              user-select: none;
+              cursor: text;
+              margin-bottom: 0.1rem;
+              margin-top: 0.3rem;
+
+              &:hover {
+                background-color: #e9ecef;
+              }
+
+              &:focus {
+                background-color: #fff;
+                border: 1px solid #3578e5;
+              }
+            }
+          }
+
+          .remaing-text-count {
+            text-align: right;
+            font-size: 0.8rem;
+          }
+
+          .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .to-whom {
+              display: flex;
+
+              i {
+                margin-right: 0.5rem;
+              }
+            }
+
+            .bio-options {
+              display: flex;
+              margin-top: 0.5rem;
+
+              .bio-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                background-color: #e4e6eb;
+                font-weight: 600;
+                user-select: none;
+                cursor: pointer;
+                outline: none;
+                border: none;
+
+                &:hover {
+                  background-color: #ccd0d5;
+                }
+
+                &:focus {
+                  outline: none;
+                  border: none;
+                }
+
+                &:active {
+                  transform: scale(0.95);
+                  outline: none;
+                }
+
+                &.cancel {
+                  background-color: #e4e6eb;
+                  margin-right: 0.5rem;
+
+                  p {
+                    color: #000;
+                    cursor: pointer;
+                  }
+                }
+
+                &.save {
+                  background-color: #3578e5;
+
+                  p {
+                    color: #fff;
+                    cursor: pointer;
+                  }
+                }
+
+                &:disabled {
+                  background-color: #e4e6eb;
+                  cursor: not-allowed;
+
+                  p {
+                    cursor: not-allowed;
+                  }
+                }
+              }
+            }
+          }
+        }
+
         .intro-item {
           display: flex;
           padding: 0.5rem 0rem;
