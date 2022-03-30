@@ -3,7 +3,7 @@
   <p></p>
 </div>
 <div class="main">
-<mat-card class="post-card" *ngFor="let data of postcardarr">
+<mat-card class="post-card" *ngFor="let data of postcardarr;let i = index" >
 <div class="post-head">
 
 <div class="username">
@@ -32,15 +32,33 @@
   <img mat-card-image src={{data.imgsrc}}>
 
   <div class="people-view">
-  <p class="like">
-    <mat-icon class="like-views" style="font-size: large;">thumb_up</mat-icon> {{data.no_of_likes}}
-    </p>
+  <div class="like">
+    <div>
+      <i
+    data-visualcompletion="css-img"
+    class="like"
+    style="
+      background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/hnprZx-fkAF.png');
+      background-position: 0px -238px;
+      background-size: 26px 656px;
+      width: 18px;
+      height: 18px;
+      background-repeat: no-repeat;
+      display: inline-block;
+      color:#4484ED;
+      margin-right: 4px;
+      filter: invert(39%) sepia(57%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(200%) saturate(147.75%) hue-rotate(202deg) brightness(97%) contrast(96%);
+    "
+
+  ></i>
+</div> {{data.no_of_likes}}
+</div>
     <p class="comment-view">{{data.no_of_comments}} comments</p>
   </div>
 <div>
   <mat-divider ></mat-divider>
 </div>
-<div class="buttons">
+<!-- <div class="buttons">
   <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="font-size: medium; text-indent: -5px;" >thumb_up_outline</mat-icon>like</button>
 
   <mat-menu #menu="matMenu" yPosition="below">
@@ -50,7 +68,8 @@
   <button mat-button><mat-icon style="font-size: medium; text-indent: -5px;">chat_bubble_outline</mat-icon>comment</button>
   <button mat-button><mat-icon style="font-size: medium; text-indent: -5px; transform:perspective(90deg);" >reply_outline</mat-icon>share</button>
 
-</div>
+</div> -->
+<app-comments-section [reacted]="reactions[i]"></app-comments-section>
 <div>
   <mat-divider ></mat-divider>
 </div>

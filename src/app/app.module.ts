@@ -65,6 +65,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CreatePostDialogComponent } from './home/components/create-post-dialog/create-post-dialog.component';
 import { ModalComponent } from './auth-page/modal/modal.component';
 import { CommentsSectionComponent } from './home/components/comments-section/comments-section.component';
+import { PostItemsComponent } from './home/components/post-items/post-items.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { CommentsSectionComponent } from './home/components/comments-section/com
     CreatePostDialogComponent,
     ModalComponent,
     CommentsSectionComponent,
+    PostItemsComponent,
   ],
   imports: [
     BrowserModule,
