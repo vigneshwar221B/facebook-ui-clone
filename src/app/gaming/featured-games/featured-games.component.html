@@ -1,5 +1,5 @@
 <mat-card class="featured-games">
-  featured games
+  Featured games
   <div
     class="main-carousel"
     style="margin-top: 2%"
@@ -7,7 +7,10 @@
   >
     <div class="outer carousel-cell" *ngFor="let item of games">
       <img [src]="item.img" alt="" />
-      <div class="inner">{{ item.name }}</div>
+      <div class="inner">
+        <p style="margin-left: 3px;">{{ item.name }}</p>
+        <div class="genre">{{ item.genre }}</div>
+      </div>
     </div>
   </div>
 </mat-card>
