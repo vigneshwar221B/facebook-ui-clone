@@ -4,6 +4,7 @@ export interface postcard {
 username:string;
 userdp:string;
 imgsrc:string;
+text:string;
 mutual_friend_1:string;
 mutual_friend_2:string;
 become_friend_1:string

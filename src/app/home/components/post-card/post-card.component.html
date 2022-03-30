@@ -29,7 +29,12 @@
     <button mat-icon-button class="menu-button"><mat-icon>more_horiz</mat-icon></button>
   </div>
 </div>
-  <img mat-card-image src={{data.imgsrc}}>
+  <div *ngIf="data.imgsrc !== null">
+    <img mat-card-image src={{data.imgsrc}}>
+  </div>
+  <div *ngIf="data.imgsrc === null">
+    <textarea>{{data.text}}</textarea>
+  </div>
 
   <div class="people-view">
   <p class="like">

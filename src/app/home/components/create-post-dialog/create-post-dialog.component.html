@@ -12,10 +12,36 @@
         <b>Mark Zuckerburg</b>
     </div>
     <div class="write-post">
-        <textarea placeholder="What's on your mind?"></textarea>
+        <textarea placeholder="What's on your mind, Mark?"  (click)="buttonActive()" id="textarea" autofocus></textarea>
     </div>
-    
-    <button>Post</button>
-    
+    <div class="add">
+      <div class="addContainer">
+        <div class="addText">
+          Add to your post
+        </div>
+        <div class="icons">
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -242px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -216px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -190px; background-size: 34px 654px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/jFFXSLBdcxF.png'); background-position: 0px -234px; background-size: 26px 260px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/zICu7c4IlHH.png'); background-position: 0px -130px; background-size: 26px 734px;"></i>
+          </div>
+          <div class="icon">
+            <i style="background-image: url('https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/dNZPtNSnPPC.png'); background-position: 0px -112px; background-size: 34px 654px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="postData()" [ngClass]="activeStatus? 'active' : ''">Post</button>
+
 
 </div>
