@@ -9,11 +9,15 @@
 .content {
   @include flex-props(center, flex-start, row);
   .image {
-    width: 100px;
+    // width: 100px;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
     img {
       width: 96px;
       height: 96px;
       border-radius: 50%;
+      object-fit: cover;
       border: 1px solid #c0c0c0;
     }
   }

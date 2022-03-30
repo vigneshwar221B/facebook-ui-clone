@@ -34,9 +34,12 @@
 }
 /* style needed for popup-card display ends*/
 .card-image{
+  width:199px;
+  height:199px;
   img{
-    @include roundDiv(198px,198px,1px);
     margin:1px;
+    @include roundDiv(198px,198px,1px);
+    object-fit: cover;
   }
 }
 .card-content{

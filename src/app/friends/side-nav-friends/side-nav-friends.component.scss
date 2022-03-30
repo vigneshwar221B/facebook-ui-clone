@@ -1,12 +1,13 @@
 .sidebar{
   z-index:20;
   width:360px;
+  //width:100%;
   height:100%;
   background-color: white;
+  position:fixed;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   padding:5px 8px;
   display: flex;
-  position:fixed;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;

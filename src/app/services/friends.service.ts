@@ -26,6 +26,4 @@ export class FriendsService {
       err => console.log(err)
     );
   }
-
-
 }

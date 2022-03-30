@@ -2,6 +2,9 @@
   margin: 10px 5px;
   padding: 25px;
   width: 100%; //890px;
+  display:flex;
+  justify-items: center;
+  flex-direction: column;
 }
 .title {
   display: flex;
