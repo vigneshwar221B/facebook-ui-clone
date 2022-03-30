@@ -7,18 +7,18 @@
         <p class="w-75 fs-4">Facebook helps you connect and share with the people in your life.</p>
       </div>
       <!-- form card -->
-      <div style="max-width: 25rem; width: 100%;">
+      <div style="max-width: 25rem; width: 100%;margin-right: 50px;">
         <!-- login form -->
         <!-- first was form tag -->
         <div class="bg-white shadow rounded p-3 input-group-lg ">
-          <input type="email" class="form-control my-3 px-3 py-3 h-10" placeholder="Email address or phone number" />
+          <input type="email" class="form-control  px-3  h-10" placeholder="Email address or phone number" />
           <input type="password" class="form-control my-3 px-3 py-3 h-10" placeholder="Password" />
-          <a href="#" routerLink="/home"><button class="btn btn-primary w-100 my-3 btn-lg">Log In</button></a>
+          <a href="#" routerLink="/home"><button class="btn btn-primary w-100 btn-lg my-2">Log In</button></a>
           <a href="#" class="text-decoration-none text-center"><p>Forgotten password?</p></a>
           <!-- create form -->
           <hr />
 
-          <div class="text-center my-3 px-5">
+          <div class="text-center px-5 mt-4 mb-2">
             <!--href="#createModal" <button class="btn btn-success btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#createModal">Create New Account</button> -->
             <a  (click)="openModel()" data-toggle="modal"><button class="btn btn-success btn-lg" type="button" >Create New Account</button></a>
         </div>

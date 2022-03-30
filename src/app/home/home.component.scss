@@ -16,11 +16,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 0;
 }
 
 .right-sidenav {
   display: block;
   width: 21%;
+  overflow-x: auto;
 }
 
 @media only screen and (max-width: 900px) {
@@ -38,4 +40,3 @@
     margin-left: 22%;
   }
 }
-

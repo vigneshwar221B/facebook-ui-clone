@@ -1,28 +1,31 @@
-.section{
-  margin:10px 5px;
-  padding:25px;
-  width:100%;//890px;
+.section {
+  margin: 10px 5px;
+  padding: 25px;
+  width: 100%; //890px;
 }
-.title{
+.title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  .name{
+  .name {
     font-size: 1.25rem;
     font-weight: 700;
   }
-  .link{
+  .link {
     text-decoration: none;
     font-weight: 400;
     font-size: 1.0625rem;
   }
 }
-.Cards{
+.Cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin:15px 4px;
+  margin: 15px 4px;
+}
+a {
+  cursor: pointer;
 }

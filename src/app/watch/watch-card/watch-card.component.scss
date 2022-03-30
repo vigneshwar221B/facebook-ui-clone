@@ -1,85 +1,74 @@
-.main{
+.main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-left: 25rem;
 }
-.post{
+.post {
   height: fit-content;
   width: fit-content;
   border-radius: 10px;
   margin-bottom: 20px;
-
 }
-.like-button{
-
+.like-button {
   width: 600px;
   border-radius: 10px;
-
 }
-mat-menu-item{
+mat-menu-item {
   border-radius: 50px;
 }
 
-.like-button img{
+.like-button img {
   height: 40px;
-  width: 40px;;
+  width: 40px;
 }
- iframe{
-   // margin-left: 50px;
- }
+iframe {
+  // margin-left: 50px;
+}
 .buttons {
   margin: 10px;
-   display: flex;
-   float:left;
-
- }
- .views{
-   float: right;
-   margin-right: 20px;
-   margin-top: 15px;
- }
-mat-card-footer{
+  display: flex;
+  float: left;
+}
+.views {
+  float: right;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+mat-card-footer {
   display: flex;
   justify-content: space-between;
-
 }
-.watch-user-dp{
-  float:left;
+.watch-user-dp {
+  float: left;
   margin-left: -10px;
-
 }
-.space{
- padding-left: 10px;
+.space {
+  padding-left: 10px;
 }
-.watch-username{
- margin-left: 10px;
- font-size: medium;
-
+.watch-username {
+  margin-left: 10px;
+  font-size: medium;
 }
-.post p{
-
-    margin-left:50px;
-    margin-top: 5px;
-    font-size: medium;
-
+.post p {
+  margin-left: 50px;
+  margin-top: 5px;
+  font-size: medium;
 }
-.video{
+.video {
   height: 400px;
   width: 800px;
 }
-.hours{
+.hours {
   margin-top: -10px;
 }
-.post-caption{
-  display:flex;
+.post-caption {
+  display: flex;
   flex-direction: column;
-
 }
 
-
-mat-video{
+mat-video {
   height: 300px;
-  width:850px;
+  width: 850px;
 }
