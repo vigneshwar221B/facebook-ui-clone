@@ -28,6 +28,42 @@ export class PostCardComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.PostcardService.setData(false);
+    this.PostcardService.dataMsg.subscribe((reload)=>{
+      console.log("Inside subscription "+this.postcardarr.length);
+      console.log(reload);
+      if(reload) {
+        this.fetchData();
+        this.PostcardService.setData(false);
+      }
+    })
+    /*this.PostcardService.getData().subscribe((data:any)=>{
+
+      this.postcardobj=data;
+      this.postcardarr=(Object.values(this.postcardobj));
+
+      for (const postDetails of this.postcardarr) {
+        this.reactions.push(new Reacted());
+        const comment: Comment = {
+          img: postDetails.comment_user_dp,
+          name: postDetails.comment_user_name,
+          text: postDetails.comment,
+        }
+
+        this.comments.push(comment);
+      }
+      this.postcardarr = this.postcardarr.reverse();
+
+    });*/
+    this.fetchData();
+    console.log("In ngOnInit of post card"+this.postcardarr.length);
+
+  }
+  ngOnChanges():void{
+    console.log("In post card ngOnChange..");
+    this.fetchData();
+  }
+   fetchData(){
     this.PostcardService.getData().subscribe((data:any)=>{
 
       this.postcardobj=data;
@@ -43,26 +79,9 @@ export class PostCardComponent implements OnInit {
 
         this.comments.push(comment);
       }
-
-    });
-
-  }
-  ngOnChanges():void{
-    console.log("In post card ngOnChange..");
-    this.fetchData();
-  }
-   fetchData(){
-    this.PostcardService.getData().subscribe((data:any)=>{
-      console.log(data);
-      this.postcardobj=data;
-      console.log(this.postcardobj);
-      this.postcardarr=(Object.values(this.postcardobj));
-      console.log(this.postcardarr);
-
-      for (let i = 0; i < this.postcardarr.length; i++) {
-        this.reactions.push(new Reacted());
-      }
+      this.comments = this.comments.reverse();
       this.postcardarr = this.postcardarr.reverse();
+
     });
    }
 

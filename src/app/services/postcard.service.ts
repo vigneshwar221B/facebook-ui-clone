@@ -2,6 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SelfPost } from '../interfaces/self-post';
+import { database } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,16 @@ import { SelfPost } from '../interfaces/self-post';
 export class PostcardService {
 
  // data:boolean=false;
-  private data = new Subject<boolean>();
+  data = new Subject<boolean>();
+  dataMsg = this.data.asObservable();
 
-  currentMytext = this.data.asObservable();
 
-  changeMytext()
+  setData(data:boolean)
   {
-    this.data.next(false);
+    this.data.next(data);
   }
-
   constructor(private http:HttpClient) { }
+
   getData():Observable<any>{
     return this.http.get<any>("https://facebook-ui-clone-2d854-default-rtdb.firebaseio.com/postcard/data.json/");
   }

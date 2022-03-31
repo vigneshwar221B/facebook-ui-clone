@@ -18,7 +18,8 @@
       </mat-menu>
       <p> {{data.username | capitalize}}
         <mat-card-subtitle class="usernametab">
-          Last Seen &middot; {{data.last_seen}}
+          <span *ngIf="data.last_seen !== 'active'">Last Seen &middot; </span>
+          <span [class.fb-blue]="data.last_seen === 'active'">{{data.last_seen}} </span>
            <mat-icon style="font-size: smaller; transform: translateY(12%);">visibility</mat-icon>
 
         </mat-card-subtitle>
@@ -33,7 +34,7 @@
     <img mat-card-image src={{data.imgsrc}}>
   </div>
   <div *ngIf="data.imgsrc === '' || data.imgsrc === null || data.text != null">
-    <textarea class=".postText">{{data.text}}</textarea>
+    <p class=".postText">{{data.text}}</p>
   </div>
 
   <div class="people-view">

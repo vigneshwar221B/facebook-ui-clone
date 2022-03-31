@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { postcard } from 'src/app/interfaces/Postcard';
 import { SelfPost } from 'src/app/interfaces/self-post';
 import { PostcardService } from 'src/app/services/postcard.service';
@@ -11,7 +12,7 @@ import { PostcardService } from 'src/app/services/postcard.service';
 })
 export class CreatePostDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<CreatePostDialogComponent>,public postcardservice:PostcardService) { }
+  constructor(public dialogRef: MatDialogRef<CreatePostDialogComponent>,public postcardservice:PostcardService,private router: Router) { }
   activeStatus:boolean=false;
   ngOnInit(): void {
   }
@@ -45,6 +46,7 @@ export class CreatePostDialogComponent implements OnInit {
     postDetails.username="Mark Zuckerberg";
 
     this.postcardservice.appendData(postDetails).subscribe((data:any)=>{console.log(data);});
+    this.postcardservice.setData(true);
     this.onNoClick();
   }
 
