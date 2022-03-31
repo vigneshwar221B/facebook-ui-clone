@@ -19,7 +19,6 @@
     @include flex-props($jc: center, $ai: center);
     min-width: fit-content;
     padding: 8px 12px;
-    // margin: 0 10px;
     border: 0.5px solid $light-grey;
     border-radius: 30px;
     cursor: pointer;

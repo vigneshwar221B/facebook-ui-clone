@@ -23,6 +23,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { FlickityModule } from 'ngx-flickity';
+import { FormsModule } from "@angular/forms";
 
 import { CreatePostComponent } from './home/components/create-post/create-post.component';
 import { SideNavComponent } from './home/components/side-nav/side-nav.component';
@@ -66,6 +67,8 @@ import { CreatePostDialogComponent } from './home/components/create-post-dialog/
 import { ModalComponent } from './auth-page/modal/modal.component';
 import { CommentsSectionComponent } from './home/components/comments-section/comments-section.component';
 import { PostItemsComponent } from './home/components/post-items/post-items.component';
+import { CommentBoxComponent } from './home/components/comment-box/comment-box.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -111,6 +114,8 @@ import { PostItemsComponent } from './home/components/post-items/post-items.comp
     ModalComponent,
     CommentsSectionComponent,
     PostItemsComponent,
+    CommentBoxComponent,
+    CapitalizePipe,
   ],
   imports: [
     BrowserModule,
@@ -130,6 +135,7 @@ import { PostItemsComponent } from './home/components/post-items/post-items.comp
     AngularFireStorageModule, // storage
     MatDialogModule,
     FlickityModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

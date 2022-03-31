@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-comments-section',
@@ -8,22 +8,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CommentsSectionComponent implements OnInit {
   @Input() reacted: any;
 
+  @Output() commentActive: EventEmitter<any> = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
   putLike(){
-    console.log(this.reacted)
     if (this.reacted && this.reacted.type)
     {
       this.reacted.name="";
       this.reacted.type="";
+    } else {
+      this.reacted.type="like";
+      this.reacted.name="Like";
     }
-    else{
-    this.reacted.type="like";
-    this.reacted.name="Like";
+  }
 
-
-    }
-
+  goToComments() {
+    this.commentActive.emit();
   }
 }

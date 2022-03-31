@@ -1,13 +1,13 @@
 
 <div class="main">
-  <mat-card class="post" *ngFor="let data of d">
+  <mat-card class="post" *ngFor="let data of d; let i = index">
 <mat-card-title-group>
       <mat-card-title class="watch-username" >
         <img mat-card-avatar class="watch-user-dp"src={{data.user_dp}}>
        <div class="space"><span></span></div>
-       <p> {{data.username}}
+       <p> {{data.username | capitalize}}
         <mat-card-subtitle class="hours">
-         {{data.posted_date}} <mat-icon>visibilty</mat-icon>
+         {{data.posted_date | capitalize}} <mat-icon>visibilty</mat-icon>
         </mat-card-subtitle>
         </p>
       </mat-card-title>
@@ -27,7 +27,7 @@
         <button mat-button><mat-icon style="font-size: medium; text-indent: -5px; ;" >reply</mat-icon>share</button>
       </div> -->
       <div class="center-reactions">
-        <app-comments-section [reacted]="reacted" ></app-comments-section>
+        <app-comments-section [reacted]="reacted[i]" ></app-comments-section>
       </div>
 
 
