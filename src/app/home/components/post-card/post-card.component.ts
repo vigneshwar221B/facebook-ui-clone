@@ -28,42 +28,20 @@ export class PostCardComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.PostcardService.setData(false);
-    this.PostcardService.dataMsg.subscribe((reload)=>{
+    this.PostcardService.dataMsg.subscribe((newPost)=>{
       console.log("Inside subscription "+this.postcardarr.length);
-      console.log(reload);
-      if(reload) {
-        this.fetchData();
-        this.PostcardService.setData(false);
+      console.log(newPost);
+      if(newPost) {
+        this.reactions.unshift(new Reacted());
+        const comment: Comment = {
+          img: newPost.comment_user_dp,
+          name: newPost.comment_user_name,
+          text: newPost.comment,
+        }
+        this.comments.unshift(comment);
+        this.postcardarr.unshift(newPost);
       }
     })
-    /*this.PostcardService.getData().subscribe((data:any)=>{
-
-      this.postcardobj=data;
-      this.postcardarr=(Object.values(this.postcardobj));
-
-      for (const postDetails of this.postcardarr) {
-        this.reactions.push(new Reacted());
-        const comment: Comment = {
-          img: postDetails.comment_user_dp,
-          name: postDetails.comment_user_name,
-          text: postDetails.comment,
-        }
-
-        this.comments.push(comment);
-      }
-      this.postcardarr = this.postcardarr.reverse();
-
-    });*/
-    this.fetchData();
-    console.log("In ngOnInit of post card"+this.postcardarr.length);
-
-  }
-  ngOnChanges():void{
-    console.log("In post card ngOnChange..");
-    this.fetchData();
-  }
-   fetchData(){
     this.PostcardService.getData().subscribe((data:any)=>{
 
       this.postcardobj=data;
@@ -81,6 +59,37 @@ export class PostCardComponent implements OnInit {
       }
       this.comments = this.comments.reverse();
       this.postcardarr = this.postcardarr.reverse();
+
+    });
+    //this.fetchData();
+    console.log("In ngOnInit of post card"+this.postcardarr.length);
+
+  }
+  ngOnChanges():void{
+    console.log("In post card ngOnChange..");
+    this.fetchData();
+  }
+   fetchData(){
+    this.PostcardService.getData().subscribe((data:any)=>{
+
+      // this.postcardobj=data;
+      setTimeout(()=>{
+        const newArr = (Object.values(data));
+        console.log(newArr.length);
+      },5000);
+
+      // for (const postDetails of this.postcardarr) {
+      //   this.reactions.push(new Reacted());
+      //   const comment: Comment = {
+      //     img: postDetails.comment_user_dp,
+      //     name: postDetails.comment_user_name,
+      //     text: postDetails.comment,
+      //   }
+
+      //   this.comments.push(comment);
+      // }
+      // this.comments = this.comments.reverse();
+      // this.postcardarr = this.postcardarr.reverse();
 
     });
    }

@@ -46,7 +46,7 @@ export class CreatePostDialogComponent implements OnInit {
     postDetails.username="Mark Zuckerberg";
 
     this.postcardservice.appendData(postDetails).subscribe((data:any)=>{console.log(data);});
-    this.postcardservice.setData(true);
+    this.postcardservice.setData(postDetails);
     this.onNoClick();
   }
 

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SelfPost } from '../interfaces/self-post';
 import { database } from 'firebase';
+import { postcard } from '../interfaces/Postcard';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,11 @@ import { database } from 'firebase';
 export class PostcardService {
 
  // data:boolean=false;
-  data = new Subject<boolean>();
+  data = new Subject<postcard>();
   dataMsg = this.data.asObservable();
 
 
-  setData(data:boolean)
+  setData(data:postcard)
   {
     this.data.next(data);
   }
