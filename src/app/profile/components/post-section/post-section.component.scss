@@ -1249,3 +1249,16 @@
     }
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .post-section-root {
+    .write-comment {
+      .input-div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
