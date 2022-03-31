@@ -96,3 +96,29 @@
     }
   }
 }
+
+@media only screen and (max-width: 700px) {
+  .cover {
+    padding: 0rem 5%;
+
+    .cover-img {
+      height: 20vh;
+
+      img {
+        object-fit: cover;
+      }
+
+      .edit-cover-img {
+        .edit-cover-btn {
+          .camera {
+            margin-right: 0rem;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
