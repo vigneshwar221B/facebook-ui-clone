@@ -32,8 +32,8 @@
   <div *ngIf="data.imgsrc !== null">
     <img mat-card-image src={{data.imgsrc}}>
   </div>
-  <div *ngIf="data.imgsrc === null">
-    <textarea>{{data.text}}</textarea>
+  <div *ngIf="data.imgsrc === '' || data.imgsrc === null || data.text != null">
+    <textarea class=".postText">{{data.text}}</textarea>
   </div>
 
   <div class="people-view">
@@ -78,6 +78,7 @@
 <div>
   <mat-divider ></mat-divider>
 </div>
+<div *ngIf="data.no_of_comments!='0' && data.comment_user_dp!=null ">
 <mat-card-content class="container">
 
         <img mat-card-avatar  src={{data.comment_user_dp}}>
@@ -93,7 +94,7 @@
        <button mat-button>share</button>
       </div> -->
 </mat-card-content>
-
+</div>
   <input mat-input class="comment-input" typ="text" placeholder="write your comments">
 
   <div>

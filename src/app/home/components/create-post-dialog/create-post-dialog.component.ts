@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { postcard } from 'src/app/interfaces/Postcard';
 import { SelfPost } from 'src/app/interfaces/self-post';
 import { PostcardService } from 'src/app/services/postcard.service';
 
@@ -26,7 +27,8 @@ export class CreatePostDialogComponent implements OnInit {
   postData(){
     let text = (document.getElementById('textarea') as HTMLInputElement).value;
     console.log(text);
-    var postDetails={} as SelfPost;
+    //var postDetails={} as SelfPost;
+    var postDetails = {} as postcard;
     postDetails.become_friend_1="Vijay";
     postDetails.become_friend_2="Ajith";
     postDetails.comment="";
@@ -42,8 +44,7 @@ export class CreatePostDialogComponent implements OnInit {
     postDetails.userdp="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg";
     postDetails.username="Mark Zuckerberg";
 
-    let valueReturn = this.postcardservice.appendData(postDetails);
-    console.log(valueReturn);
+    this.postcardservice.appendData(postDetails).subscribe((data:any)=>{console.log(data);});
     this.onNoClick();
   }
 
