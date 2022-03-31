@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { Reacted } from 'src/app/interfaces/Reacted';
 
 @Component({
   selector: 'app-gaming-posts',
@@ -29,6 +30,12 @@ export class PostsComponent implements OnInit {
   // ];
 
   //safePosts: { name: string; game: string; date: string; vidUrl: SafeUrl }[];
+
+  reacted: Reacted[] = [
+    new Reacted(),
+    new Reacted(),
+    new Reacted(),
+  ];
 
   constructor(public sanitizer: DomSanitizer) {
     // this.safePosts = this.posts.map((post) => {
