@@ -156,17 +156,17 @@ export class SideNavComponent implements OnInit {
     {
       item: 'Candy Crush Saga',
       img_url:
-        'https://scontent.fblr17-1.fna.fbcdn.net/v/t39.2081-6/22088589_1654976451201719_5191478939503034368_n.png?stp=c6.6.103.103a_dst-png_p110x110&_nc_cat=1&ccb=1-5&_nc_sid=eaa83b&_nc_ohc=R15Gxkdya74AX8CinTK&_nc_ht=scontent.fblr17-1.fna&oh=00_AT9QFZrawjWCJ3bh2QPffuv3X2ctqg2DvhYw87y-JMFGkg&oe=62416C82',
+        'https://play-lh.googleusercontent.com/TLUeelx8wcpEzf3hoqeLxPs3ai1tdGtAZTIFkNqy3gbDp1NPpNFTOzSFJDvZ9narFS0=s360-rw',
     },
     {
       item: 'Criminal Case',
       img_url:
-        'https://scontent.fblr17-1.fna.fbcdn.net/v/t39.2081-6/12057001_427250474066399_2006674606_n.png?stp=c6.6.103.103a_dst-png_p110x110&_nc_cat=1&ccb=1-5&_nc_sid=eaa83b&_nc_ohc=RQQ3xFTx0isAX8YpL1j&_nc_ht=scontent.fblr17-1.fna&oh=00_AT_8YLYdAFOXhwSXtwaDnK4v0xkCHQKPOr3Yo_qjKPJUTQ&oe=62406F3C',
+        'https://static.wikia.nocookie.net/criminal-case-grimsborough/images/e/ea/App_Icon_%283%29.png',
     },
     {
       item: "Diggy's Adventure",
       img_url:
-        'https://scontent.fmaa2-3.fna.fbcdn.net/v/t39.2081-6/55589414_2082467898503397_3379962373723914240_n.png?stp=c5.5.50.50a_dst-png_p56x56&_nc_cat=1&ccb=1-5&_nc_sid=eaa83b&_nc_ohc=IF2voqcU1xIAX--0DAz&_nc_ht=scontent.fmaa2-3.fna&oh=00_AT_RPrp2PyUAF2z28FHQ4jOLTrgpa-KcH_k-svkUVERBCg&oe=62406F60',
+        'https://play-lh.googleusercontent.com/JKve1M-RG0gL2wrUmyFRqaAZ4XkMDZmOtu7-z1RlUHyg-6rKB7nOc_jtc1XfThX0iE0=s360-rw',
     },
   ];
 }

@@ -16,10 +16,10 @@
 
       </mat-button>
       </mat-menu>
-      <p> {{data.username}}
+      <p> {{data.username | capitalize}}
         <mat-card-subtitle class="usernametab">
-          last seen .{{data.last_seen}}
-          <mat-icon style="font-size: smaller;">visibility</mat-icon>
+          Last Seen &middot; {{data.last_seen}}
+           <mat-icon style="font-size: smaller; transform: translateY(12%);">visibility</mat-icon>
 
         </mat-card-subtitle>
       </p>
@@ -63,42 +63,15 @@
 <div>
   <mat-divider ></mat-divider>
 </div>
-<!-- <div class="buttons">
-  <button mat-button [matMenuTriggerFor]="menu"><mat-icon style="font-size: medium; text-indent: -5px;" >thumb_up_outline</mat-icon>like</button>
 
-  <mat-menu #menu="matMenu" yPosition="below">
-    <button mat-menu-item class="like-button"> <img src="https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"><img src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"> <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif"><img src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"><img src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"><img src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif"></button>
-  </mat-menu>
-
-  <button mat-button><mat-icon style="font-size: medium; text-indent: -5px;">chat_bubble_outline</mat-icon>comment</button>
-  <button mat-button><mat-icon style="font-size: medium; text-indent: -5px; transform:perspective(90deg);" >reply_outline</mat-icon>share</button>
-
-</div> -->
-<app-comments-section [reacted]="reactions[i]"></app-comments-section>
+<app-comments-section [reacted]="reactions[i]" (commentActive)="focusCommentBox(i)"></app-comments-section>
 <div>
   <mat-divider ></mat-divider>
 </div>
-<div *ngIf="data.no_of_comments!='0' && data.comment_user_dp!=null ">
-<mat-card-content class="container">
-
-        <img mat-card-avatar  src={{data.comment_user_dp}}>
-        <div class="content">
-        <mat-card-subtitle style="font-size: small;">{{data.comment_user_name}}</mat-card-subtitle>
-
-        <mat-card-title class="comment" style="font-size: small;">{{data.comment}}</mat-card-title>
-        </div>
-
-      <!-- <div class="comment-buttons">
-       <button mat-button>like</button>
-       <button mat-button>Reply</button>
-       <button mat-button>share</button>
-      </div> -->
-</mat-card-content>
+<!-- https://cdn.iconscout.com/icon/free/png-64/like-2387659-1991059.png"><img src="https://cdn.iconscout.com/icon/free/png-64/love-2387666-1991064.png"> <img src="https://c.tenor.com/RlOucaUwKekAAAAj/funny.gif"><img src="https://c.tenor.com/5ucG8qMn3nMAAAAM/care-love.gif"><img src="https://c.tenor.com/9fNZzUOwDSkAAAAM/emoji-mad.gif"><img src="https://c.tenor.com/sKDzNg2OwAsAAAAj/sad-face-emoji.gif -->
+<div class="comments">
+  <app-comment-box [comments]="[comments[i]]"></app-comment-box>
 </div>
-  <input mat-input class="comment-input" typ="text" placeholder="write your comments">
 
-  <div>
-    <p></p>
-  </div>
 </mat-card>
 </div>

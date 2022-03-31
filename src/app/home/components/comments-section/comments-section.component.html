@@ -1,5 +1,5 @@
 <div class="reaction-options">
-  <div class="reaction-btn">
+  <div class="reaction-btn" (click)="putLike()">
     <div class="icon">
       <i
         data-visualcompletion="css-img"
@@ -77,14 +77,14 @@
         *ngIf="reacted.type === 'angry'"
       />
     </div>
-    <div class="reaction" (click)="putLike()">
+    <div class="reaction">
       <p class="" *ngIf="reacted.name === ''">Like</p>
       <p class="{{ reacted.type }}" *ngIf="reacted.name !== ''">
         {{ reacted.name }}
       </p>
     </div>
   </div>
-  <div class="reaction-btn">
+  <div class="reaction-btn" (click)="goToComments()">
     <div class="icon">
       <i
         data-visualcompletion="css-img"
