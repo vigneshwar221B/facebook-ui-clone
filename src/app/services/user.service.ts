@@ -7,7 +7,7 @@ import { User } from '../interfaces/User';
 })
 export class UserService {
 
-  baseURL: string = 'https://facebook-clone-presidio-default-rtdb.firebaseio.com/users.json';
+  baseURL: string = 'http://localhost:5000/api/Users';
 
   users: User[] = [];
 
@@ -15,7 +15,7 @@ export class UserService {
 
   fetchUsers() {
     this.http.get(this.baseURL).subscribe(
-      res => this.users = Object.values(res)[0],
+      res => this.users = res as User[],
       err => console.log(err)
       
     );

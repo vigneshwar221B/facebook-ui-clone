@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreatePostDialogComponent } from 'src/app/home/components/create-post-dialog/create-post-dialog.component';
+import { ProfileService } from 'src/app/services/profile.service';
 
 @Component({
   selector: 'app-post-section',
@@ -10,7 +11,9 @@ import { CreatePostDialogComponent } from 'src/app/home/components/create-post-d
 export class PostSectionComponent implements OnInit {
   @Input() friendsList: any;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, public profileService: ProfileService) {
+    this.profileService.fetchPhotos();
+  }
 
   ngOnInit(): void {}
 
@@ -40,17 +43,21 @@ export class PostSectionComponent implements OnInit {
     this.canEditBio = false;
   }
 
-  photos = [
-    'https://randomuser.me/api/portraits/men/4.jpg',
-    'https://randomuser.me/api/portraits/men/88.jpg',
-    'https://randomuser.me/api/portraits/men/66.jpg',
-    'https://randomuser.me/api/portraits/men/62.jpg',
-    'https://randomuser.me/api/portraits/men/90.jpg',
-    'https://randomuser.me/api/portraits/men/49.jpg',
-    'https://randomuser.me/api/portraits/men/24.jpg',
-    'https://randomuser.me/api/portraits/men/55.jpg',
-    'https://randomuser.me/api/portraits/men/82.jpg',
-  ];
+  get photos() {
+    return this.profileService.photos;
+  }
+
+  // photos = [
+  //   'https://randomuser.me/api/portraits/men/4.jpg',
+  //   'https://randomuser.me/api/portraits/men/88.jpg',
+  //   'https://randomuser.me/api/portraits/men/66.jpg',
+  //   'https://randomuser.me/api/portraits/men/62.jpg',
+  //   'https://randomuser.me/api/portraits/men/90.jpg',
+  //   'https://randomuser.me/api/portraits/men/49.jpg',
+  //   'https://randomuser.me/api/portraits/men/24.jpg',
+  //   'https://randomuser.me/api/portraits/men/55.jpg',
+  //   'https://randomuser.me/api/portraits/men/82.jpg',
+  // ];
 
   feeds = [
     {
@@ -80,7 +87,7 @@ export class PostSectionComponent implements OnInit {
               {
                 name: 'Mark Zukerberg',
                 text: 'Thank you',
-                img: 'https://scontent.fixm4-1.fna.fbcdn.net/v/t1.6435-9/79515135_10111007623880301_5111576226921709568_n.jpg?_nc_cat=1&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=4D9hZwxZFZIAX_20O80&_nc_ht=scontent.fixm4-1.fna&oh=00_AT-3pqM0XXzbq9mJim_5vt15Zf26K6fX1oBWW8mZjMLO3Q&oe=62648D56',
+                img: 'https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg',
               },
               {
                 name: 'Neab Mey',
