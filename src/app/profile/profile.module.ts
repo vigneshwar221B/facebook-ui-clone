@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile.component';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     MenuSectionComponent,
     PostSectionComponent,
   ],
-  imports: [CommonModule, ProfileRoutingModule, FormsModule],
+  imports: [CommonModule, ProfileRoutingModule, FormsModule, HttpClientModule],
 })
 export class ProfileModule {}

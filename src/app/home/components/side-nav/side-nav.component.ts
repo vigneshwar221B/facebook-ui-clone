@@ -166,7 +166,7 @@ export class SideNavComponent implements OnInit {
     {
       item: "Diggy's Adventure",
       img_url:
-        'https://play-lh.googleusercontent.com/JKve1M-RG0gL2wrUmyFRqaAZ4XkMDZmOtu7-z1RlUHyg-6rKB7nOc_jtc1XfThX0iE0=s360-rw',
+        'https://static.pixelfederation.com/portal/assets/share/da.png',
     },
   ];
 }
