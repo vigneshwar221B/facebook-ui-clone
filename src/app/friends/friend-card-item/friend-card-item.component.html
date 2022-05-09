@@ -14,7 +14,7 @@
     <div *ngIf="friendrequest.accept==='neutral'">
       <div class="mutual-friends">
         <div *ngIf="friendrequest.mutual_friends>0" class="images">
-          <img src="{{friendrequest.friends_url[0]}}" alt="friend1" class="friend1"/>
+          <img src="{{friendrequest.friends_url}}" alt="friend1" class="friend1"/>
           <img *ngIf="friendrequest.mutual_friends>1" src="https://thumbs.dreamstime.com/b/concept-open-magic-book-pages-water-land-small-child-fantasy-nature-learning-copy-space-166401875.jpg" alt="friend2" class="friend2">
         </div>
         <div class="count tip" [attr.datatooltip]="friendsList">{{friendrequest.mutual_friends}} mutual friend<span *ngIf="friendrequest.mutual_friends!=='1'">s</span></div>

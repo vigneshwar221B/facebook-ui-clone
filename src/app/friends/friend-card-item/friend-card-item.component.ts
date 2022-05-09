@@ -21,7 +21,7 @@ export class FriendCardItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.friendsList=this.friendrequest.friends_name.join("\n");
+    this.friendsList=this.friendrequest.friends_name;//.join("\n");
    // console.log(this.friendsList);
   }
   removeElement(friendrequest:string){
