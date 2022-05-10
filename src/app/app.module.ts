@@ -51,10 +51,7 @@ import { CreateStoryComponent } from './create-story/create-story.component';
 import { SideNavMarketplaceComponent } from './marketplace/side-navbar/side-nav-marketplace/side-nav-marketplace.component';
 import { SideNavMarketplaceitemsComponent } from './marketplace/side-navbar/side-nav-marketplaceitems/side-nav-marketplaceitems.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+
 import { environment } from 'src/environments/environment';
 import { SideContainerComponent } from './navbar/side-container/side-container.component';
 import { WatchCardComponent } from './watch/watch-card/watch-card.component';
@@ -129,10 +126,6 @@ import { CapitalizePipe } from './pipes/capitalize.pipe';
     MatDividerModule,
     MatSidenavModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule, // firestore
-    AngularFireAuthModule, // auth
-    AngularFireStorageModule, // storage
     MatDialogModule,
     FlickityModule,
     FormsModule,

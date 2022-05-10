@@ -8,6 +8,6 @@ export class WatchService {
 
   constructor(private http:HttpClient) { }
   getData():Observable<any>{
-    return this.http.get<any>("https://facebook-ui-clone-2d854-default-rtdb.firebaseio.com/watch/data.json/");
+    return this.http.get<any>("http://localhost:5000/api/watches");
   }
 }

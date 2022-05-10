@@ -2,7 +2,7 @@ import { Observable, Subject } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SelfPost } from '../interfaces/self-post';
-import { database } from 'firebase';
+
 import { postcard } from '../interfaces/Postcard';
 
 @Injectable({
