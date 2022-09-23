@@ -28,23 +28,23 @@ export class AuthPageComponent implements OnInit {
   }
   openModel(){
 
-    // let createModel = document.getElementById('createModal');
-    // if(createModel)
-    // {
-    //   createModel.classList.add('show');
-    //   createModel.style.display='block';
-    //   createModel.style.opacity='1';
-    //   let bodyElement = document.querySelector(".body");//getElementsByClassName('body')[0];
-    //   console.log(bodyElement);
-    //  // if(bodyElement)
-    //     //bodyElement.style.opacity='0.5';//.classList.add('modal-open');
-    // }
-    //  console.log("I'm in - " +createModel);
-    // this.toggleModel=!this.toggleModel;
-    this.dialog.open(ModalComponent, {
-      width: '500px',
-      height: '70vh'
-    });
+    let createModel = document.getElementById('createModal');
+    if(createModel)
+    {
+      createModel.classList.add('show');
+      createModel.style.display='block';
+      createModel.style.opacity='1';
+      let bodyElement = document.querySelector(".body");//getElementsByClassName('body')[0];
+      console.log(bodyElement);
+     // if(bodyElement)
+        //bodyElement.style.opacity='0.5';//.classList.add('modal-open');
+    }
+     console.log("I'm in - " +createModel);
+    this.toggleModel=!this.toggleModel;
+    // this.dialog.open(ModalComponent, {
+    //   width: '500px',
+    //   height: '70vh'
+    // });
 
   }
 }
