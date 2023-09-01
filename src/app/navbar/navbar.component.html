@@ -2,7 +2,7 @@
   <div>
       <ul>
           <!-- Left Elements start  -->
-          <li> <a routerLink="/home" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
+          <li> <a (click)="active(1)" routerLink="/home" id="fb"> <i class="fab fa-facebook-f"></i> </a> </li>
           <li>
             <div [ngClass]="{'select':selectForm}" >
               <form class="search-content" >
@@ -48,7 +48,7 @@
           <li class="right"> <button class="tip" (click)="rightNavActive(2)" [ngClass]="rightActiveTab===2 ? 'rightNavFocus' : ''" data-tooltip="Menu" id="btn_plus"><mat-icon>apps</mat-icon></button> </li>
           <li class="right"> <button class="tip" (click)="rightNavActive(3)" [ngClass]="rightActiveTab===3 ? 'rightNavFocus' : ''" data-tooltip="Message" id="btn_msg"><i class="fab fa-facebook-messenger"></i></button></li>
           <li class="right"> <button class="tip" (click)="rightNavActive(4)" [ngClass]="rightActiveTab===4 ? 'rightNavFocus' : ''" data-tooltip="Notification" id="btn_bell"> <i class="fas fa-bell"></i></button></li>
-          <li class="right"> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button>  </li>
+          <li class="right"> <button class="tip" (click)="rightNavActive(5)" [ngClass]="rightActiveTab===5 ? 'rightNavFocus' : ''" data-tooltip="Account" id="btn_profile"><mat-icon>arrow_drop_down</mat-icon></button></li>
           <!-- Right Elements ends -->
       </ul>
   </div>
@@ -56,7 +56,7 @@
 <!-- <div>
   <app-side-container [display]="display"></app-side-container>
 </div> -->
-<div *ngIf="accountStatus" class="sideContainer" id="account">
+<div *ngIf="accountStatus===true" class="sideContainer" id="account">
   <div class="top-section">
     <div class="img">
       <img src="https://yourwikis.com/wp-content/uploads/2020/01/mark-zuck-img.jpg" alt="profile-picture">
