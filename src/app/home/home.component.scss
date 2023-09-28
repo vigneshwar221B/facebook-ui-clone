@@ -10,7 +10,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 3.5rem;
+
+}
+.home__bg {
   background-color: #f0f2f5;
+  min-height: 100vh;
 }
 .feed {
   display: flex;
